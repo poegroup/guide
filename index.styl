@@ -1,0 +1,127 @@
+@require './node_modules/shoelace-ui-palette-solarized'
+
+//- color vars
+
+palette--blue      = darken(desaturate(palette--blue, 60%), 25%)
+blue               = palette--blue
+palette--gray-base = blue
+a--hover-color     = inherit
+a--visited-color   = inherit
+hr--border         = lighten(blue, 80%)
+
+//- size vars
+
+font-size--base  = 12px
+
+//- dependencies
+
+@require './node_modules/shoelace-ui-aglet'
+@require './node_modules/nib'
+
+//- styles
+
+h1
+h2
+h3
+h4
+h5
+  color darken(blue, 25%)
+
+h1
+  font-size 44px
+  font-weight bold
+  margin-bottom 0
+  margin-left 200px
+  padding 50px 0 20px
+
+h2
+  color blue
+  font-size 25px
+  font-weight bold
+  padding 50px 0
+  position relative
+  right 850px
+  text-align right
+
+hr
+  &.vertical
+    position relative
+    transform rotate(90deg)
+    right 310px
+  &.menu-top
+    margin-bottom 10px
+  &.menu-bottom
+    opacity 8
+  &.menu-top
+  &.menu-bottom
+    margin-top 0
+    margin-left -250%
+    width 500%
+
+main
+  width 1000px
+  margin-left 25%
+
+ul
+menu
+  padding-left 0
+
+menu
+  display inline-block
+  left 200px
+  position relative
+  width 700px
+
+ul
+  list-style none
+  float left
+  position relative
+  width 33%
+  .index
+    cursor default
+    font-size 10px
+    font-weight bold
+    left -25px
+    line-height 1.75
+    opacity .5
+    position absolute
+
+li:nth-child(2)
+  font-weight bold
+  a
+    color palette--blue
+    &:focus
+      outline 0
+    &:before
+      content '᚛'
+      left -15px
+      opacity .25
+      position absolute
+      transition-property color
+      transition-duration 150ms
+      transition-timing-function linear
+
+//- section stylus
+
+section
+  box-sizing border-box
+  padding-left 200px
+  padding-right 100px
+
+  .subsection
+    position relative
+    margin-bottom 50px
+
+  h3
+    font-size 12px
+    font-weight bold
+    position relative
+    top 0
+    text-align right
+    left -100%
+    margin-right 50px
+    margin-bottom -15px
+
+pre
+  margin-top 30px
+  margin-bottom @margin-top

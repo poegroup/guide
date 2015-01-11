@@ -1,0 +1,24 @@
+{
+  "name": "guide",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/poegroup/guide.git"
+  },
+  "author": "Michael Andrew Vanasse <mail@mndvns.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poegroup/guide/issues"
+  },
+  "homepage": "https://github.com/poegroup/guide",
+  "dependencies": {
+    "markdown": "^0.5.0",
+    "nib": "^1.0.4",
+    "shoelace-ui-aglet": "^0.1.2"
+  }
+}

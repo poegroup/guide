@@ -1,0 +1,34 @@
+
+<!DOCTYPE html><html><head><title>Poe Guide</title><link href="index.css" rel="stylesheet" type="text/css"></head><body><main><h1><span>Poe Guide</span></h1><hr class="menu-top"><menu><ul><li class="index">1</li><li><a href="#">Introduction</a></li><li><a href="#">Getting Started</a></li><li><a href="#">Hello World</a></li></ul><ul><li class="index">2</li><li><a href="#">In the Browser</a></li><li><a href="#">Markup</a></li><li><a href="#">Stylesheets</a></li><li><a href="#">Javascript</a></li><li><a href="#">A Static Site</a></li></ul><ul><li class="index">3</li><li><a href="#">Client Hypermedia</a></li><li><a href="#">Data Binding</a></li><li><a href="#">Forms</a></li><li><a href="#">Composition</a></li><li><a href="#">A Front End</a></li></ul><ul><li class="index">4</li><li><a href="#">API Design</a></li><li><a href="#">Hypermedia</a></li><li><a href="#">Specs and Standards</a></li><li><a href="#">A Mock API</a></li></ul><ul><li class="index">5</li><li><a href="#">Full-Stack</a></li><li><a href="#">Requirements</a></li><li><a href="#">Front-Ends</a></li><li><a href="#">Contracts</a></li><li><a href="#">Systems</a></li></ul><ul><li class="index">6</li><li><a href="#">Appendix</a></li><li><a href="#">Organizations</a></li><li><a href="#">Resources</a></li><li><a href="#">Credits</a></li><li><a href="#">License</a></li></ul></menu><hr class="menu-bottom"><h2>Introduction</h2><section><div class="subsection"><h3 id="overview">Overview</h3>
+<p>Poe is a collection of open-source tools for web developers, and Poe UI is its front-end framework.
+Although we refer to it as a framework, Poe UI is not a framework in the traditional sense that it
+has a distinctive and novel approach to specific problems; it&#39;s not written in a new and exciting language;
+in some ways it&#39;s quite plain.</p>
+<p>That said, you would be hard pressed to match in performace, extensibility, and productivity. Poe UI
+works well as a quick static site and serves just as easily for standalone applications. But it&#39;s real
+purpose and strength is working hand-in-hand with a hypermedia API.</p>
+</div><div class="subsection"><h3 id="goals">Goals</h3>
+<p>TODO</p>
+</div><div class="subsection"><h3 id="getting-started">Getting Started</h3>
+<p>First off, this tutorial assumes a basic familiarity with the terminal, JS/HTML/CSS, and an editor of some kind.
+We&#39;ll also use git and node, so install if necessary.</p>
+<p>(PROTIP: if you&#39;re on OS X, it&#39;s better to install node via homebrew.)</p>
+</div></section><h2>Starting from Scratch</h2><section><div class="subsection"><h3 id="our-first-app">Our First App</h3>
+<p>Start by opening your terminal and running <code>npm install --global Poe UI</code>. This installs a command line utility for
+generating new Poe UI apps.</p>
+<pre><code>$ npm install --global poe-ui
+</code></pre><p>After installing, make and navigate into a directory somewhere. This will be our app&#39;s root.</p>
+<pre><code class="lang-sh">$ mkdir ~/Projects/poe-app
+$ cd ~/Projects/poe-app
+$ poe-ui-create
+</code></pre>
+<p>At this point you&#39;ll be prompted to give your app a name, and optional description and organization. Once
+everything has been created, you can start the app by running</p>
+<pre><code>make start
+</code></pre><p>After a second, the output should look something like this:</p>
+<pre><code>14:38:42 web.1   | started with pid 44663
+14:38:42 web.1   | [LR] auto-reload enabled
+14:38:42 web.1   | Server listening on port 5000
+</code></pre><p>This means the app is up an running. So now if we navigate in our browser to <code>localhost:5000</code>, we can see the
+default display screen Poe UI makes for us.</p>
+</div></section></main></body></html>

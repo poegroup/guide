@@ -1,0 +1,130 @@
+extends layout.jade
+
+block menu
+  h1
+    span Poe Guide
+
+  hr.menu-top
+
+  menu
+    mixin list(index)
+      ul
+        li.index= index
+        block
+    mixin listitem(title)
+      li: a(href='#')= title
+
+    +list(1)
+      +listitem('Introduction')
+      +listitem('Getting Started')
+      +listitem('Hello World')
+
+    +list(2)
+      +listitem('In the Browser')
+      +listitem('Markup')
+      +listitem('Stylesheets')
+      +listitem('Javascript')
+      +listitem('A Static Site')
+
+    +list(3)
+      +listitem('Client Hypermedia')
+      +listitem('Data Binding')
+      +listitem('Forms')
+      +listitem('Composition')
+      +listitem('A Front End')
+
+    +list(4)
+      +listitem('API Design')
+      +listitem('Hypermedia')
+      +listitem('Specs and Standards')
+      +listitem('A Mock API')
+
+    +list(5)
+      +listitem('Full-Stack')
+      +listitem('Requirements')
+      +listitem('Front-Ends')
+      +listitem('Contracts')
+      +listitem('Systems')
+
+    +list(6)
+      +listitem('Appendix')
+      +listitem('Organizations')
+      +listitem('Resources')
+      +listitem('Credits')
+      +listitem('License')
+
+  hr.menu-bottom
+
+block content
+
+  h2 Introduction
+
+  section
+    .subsection
+      :markdown
+        ### Overview
+
+        Poe is a collection of open-source tools for web developers, and Poe UI is its front-end framework.
+        Although we refer to it as a framework, Poe UI is not a framework in the traditional sense that it
+        has a distinctive and novel approach to specific problems; it's not written in a new and exciting language;
+        in some ways it's quite plain.
+
+        That said, you would be hard pressed to match in performace, extensibility, and productivity. Poe UI
+        works well as a quick static site and serves just as easily for standalone applications. But it's real
+        purpose and strength is working hand-in-hand with a hypermedia API.
+
+    .subsection
+      :markdown
+        ### Goals
+
+        TODO
+
+    .subsection
+      :markdown
+        ### Getting Started
+
+        First off, this tutorial assumes a basic familiarity with the terminal, JS/HTML/CSS, and an editor of some kind.
+        We'll also use git and node, so install if necessary.
+
+        (PROTIP: if you're on OS X, it's better to install node via homebrew.)
+
+
+  h2 Starting from Scratch
+      
+  section
+    .subsection
+      :markdown
+        ### Our First App
+
+        Start by opening your terminal and running `npm install --global Poe UI`. This installs a command line utility for
+        generating new Poe UI apps.
+
+        ```
+        $ npm install --global poe-ui
+        ```
+
+        After installing, make and navigate into a directory somewhere. This will be our app's root.
+
+        ```sh
+        $ mkdir ~/Projects/poe-app
+        $ cd ~/Projects/poe-app
+        $ poe-ui-create
+        ```
+
+        At this point you'll be prompted to give your app a name, and optional description and organization. Once
+        everything has been created, you can start the app by running
+
+        ```
+        make start
+        ```
+
+        After a second, the output should look something like this:
+
+        ```
+        14:38:42 web.1   | started with pid 44663
+        14:38:42 web.1   | [LR] auto-reload enabled
+        14:38:42 web.1   | Server listening on port 5000
+        ```
+
+        This means the app is up an running. So now if we navigate in our browser to `localhost:5000`, we can see the
+        default display screen Poe UI makes for us.
