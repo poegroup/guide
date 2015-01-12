@@ -366,6 +366,9 @@ legend {
 .icon-navicon:before {
   content: '\f0c9';
 }
+body {
+  overflow-x: hidden;
+}
 h1,
 h2,
 h3,
@@ -377,8 +380,9 @@ h1 {
   font-size: 44px;
   font-weight: bold;
   margin-bottom: 0;
-  margin-left: 200px;
+  margin-top: 0;
   padding: 50px 0 20px;
+  text-align: center;
 }
 h2 {
   color: #446277;
@@ -412,8 +416,6 @@ hr.menu-bottom {
 hr.menu-top,
 hr.menu-bottom {
   margin-top: 0;
-  margin-left: -250%;
-  width: 500%;
 }
 main {
   width: 1000px;
@@ -427,7 +429,7 @@ menu {
   display: inline-block;
   left: 200px;
   position: relative;
-  width: 700px;
+  width: 800px;
 }
 ul {
   list-style: none;

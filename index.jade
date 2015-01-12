@@ -12,7 +12,8 @@ block menu
         li.index= index
         block
     mixin listitem(title)
-      li: a(href='#')= title
+      - var href = '#' + title.split(' ').join('').toLowerCase()
+      li: a(href=href)= title
 
     +list(1)
       +listitem('Introduction')
@@ -57,7 +58,10 @@ block menu
 
 block content
 
-  h2 Introduction
+  mixin section-heading(name)
+    h2(id=name.split(' ').join('').toLowerCase())= name
+
+  +section-heading('Introduction')
 
   section
     .subsection
@@ -89,7 +93,7 @@ block content
         (PROTIP: if you're on OS X, it's better to install node via homebrew.)
 
 
-  h2 Starting from Scratch
+  +section-heading('In the Browser')
       
   section
     .subsection
