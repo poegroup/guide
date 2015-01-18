@@ -1,7 +1,7 @@
 # guide
 
 A guide to all things Poe.
-Visit [https://github.com/poegroup/guide](https://github.com/poegroup/guide).
+Visit [https://poegroup.github.com/guide](https://poegroup.github.com/guide).
 
 ## Installation
 
