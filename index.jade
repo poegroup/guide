@@ -59,16 +59,18 @@ block menu
 
 block content
 
-  mixin section-heading(name)
-    h2(id=name.split(' ').join('').toLowerCase())= name
+  mixin section(name)
+    - var id = name.split(' ').join('').toLowerCase()
+    - var section = id + '-section'
+    h2(id=id)= name
+    section(id=section class=section)
+      block
 
-  +section-heading('Introduction')
+  +section('Introduction')
 
-  section
     .subsection
       :markdown
         ### Overview
-
         Poe is a collection of open-source tools for web developers, and Poe UI is its front-end framework.
         Although we refer to it as a framework, Poe UI is not a framework in the traditional sense that it
         has a distinctive and novel approach to specific problems; it's not written in a new and exciting language;
@@ -95,11 +97,6 @@ block content
       .NOTE
         | If you're on OS X, it's better to install node via **[homebrew](http://brew.sh)**.
 
-      .WARNING
-        | Go <a href="https://github.com/componentjs/guide/blob/master/component/getting-started.md#setup-authentication">here</a>
-        | and make sure you are properly exposing your github credentials. If you aren\'t, you will only have 60 requests to make; after
-        | that your requests will be refused until you set up your account.
-
     .subsection
       h3
         | Hello World
@@ -123,10 +120,17 @@ block content
         | everything has been created, you can start the app by running
 
       code.block
+        | npm install
         | make start
 
+      .WARNING
+        | If you're receiving long log messages, go
+        | <a href="https://github.com/componentjs/guide/blob/master/component/getting-started.md#setup-authentication">here</a>
+        | and make sure you are properly exposing your github credentials. If you aren\'t, you will only have 60 requests to make; after
+        | that your requests will be refused until you set up your account.
+
       p
-        | After a moment to start, our output should look something like this:
+        | After a moment to install dependencies, our output should look something like this:
 
       code.block
         | 14:38:42 web.1   | started with pid 44663
@@ -134,17 +138,15 @@ block content
         | 14:38:42 web.1   | Server listening on port 5000
 
       .NOTE
-        br
-        | This log style may look familiar to you; we are using **[foreman](https://github.com/ddollar/foreman)** to
-        | run on your machine exactly as it does in production.
-        br
-        | This means the app is up an running. So now if we navigate in our browser to `localhost:5000`, we can see the
-        | default initialized app ready for us.
+        p
+          | This log style may look familiar to you; we are using **[foreman](https://github.com/ddollar/foreman)** to
+          | run on your machine exactly as it does in production.
+        p
+          | This means the app is up an running. So now if we navigate in our browser to `localhost:5000`, we can see the
+          | default initialized app ready for us.
 
-  //- TODO
-  //- add screenshot of initialized app
+  +section('Structure')
+    .subsection: include includes/files
 
-  +section-heading('Structure')
-
-  section
-    .subsection: include ./includes/files
+  script
+    include includes/click.js

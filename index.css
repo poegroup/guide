@@ -1,3 +1,4 @@
+
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -39,11 +40,11 @@ h6 {
   color: inherit;
 }
 h1,
-h2,
-h3 {
+h2 {
   margin-top: 17px;
   margin-bottom: 8.5px;
 }
+h3,
 h4,
 h5,
 h6 {
@@ -56,9 +57,7 @@ h1 {
 h2 {
   font-size: 25px;
 }
-h3 {
-  font-size: 21px;
-}
+h3,
 h4 {
   font-size: 15px;
 }
@@ -71,8 +70,6 @@ h6 {
 hr {
   margin-top: 17px;
   margin-bottom: 17px;
-  margin-left: 0;
-  margin-right: 0;
   border: 0;
   border-top: 1px solid #d6e0e8;
   -moz-box-sizing: content-box;
@@ -366,6 +363,9 @@ legend {
 .icon-navicon:before {
   content: '\f0c9';
 }
+html {
+  font-size: 14px;
+}
 body {
   overflow-x: hidden;
 }
@@ -417,6 +417,10 @@ hr.menu-top,
 hr.menu-bottom {
   margin-top: 0;
 }
+blockquote {
+  margin-right: 5rem;
+  margin-left: 3rem;
+}
 main {
   width: 1000px;
   margin: 0 auto;
@@ -439,7 +443,6 @@ menu ul {
 }
 menu ul .index {
   cursor: default;
-  background: #ccc;
   font-size: 10px;
   font-weight: bold;
   left: -25px;
@@ -496,92 +499,230 @@ section {
 }
 section .subsection {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+}
+section h3,
+.NOTE:before,
+.WARNING:before {
+  font-weight: bold;
+  margin-right: 50px;
+  margin-top: 0;
+  position: absolute;
+  right: 700px;
+  text-align: right;
 }
 section h3 {
-  font-size: 12px;
-  font-weight: bold;
-  position: relative;
   top: 0;
-  text-align: right;
-  left: -100%;
-  margin-right: 50px;
-  margin-bottom: -15px;
+  font-size: 12px;
 }
+.NOTE {
+  color: #c2a446;
+  margin: 20px 0;
+}
+.NOTE:before {
+  content: 'Note';
+  color: #b58900;
+}
+.WARNING {
+  color: #bf8369;
+  margin: 20px 0;
+}
+.WARNING:before {
+  content: 'Warning';
+  color: #cb4b16;
+}
+.filetree-content .inner pre,
+code.block-wide,
 code.block {
   display: inline-block;
-  margin-top: 30px;
-  margin-bottom: 40px;
-  margin-left: 20%;
+  margin-top: 25px;
+  margin-bottom: 45px;
+  margin-left: 25%;
   white-space: pre-line;
-  width: 500px;
 }
-.code-wrap {
+code.block-wide {
+  width: 700px;
+  margin-left: 0;
+  overflow-x: scroll;
+  white-space: pre;
+  font-size: 10px;
+}
+.filetree {
   display: inline-block;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 75%;
-  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-.code-wrap .line {
+.filetree-help,
+.filetree-code,
+.filetree-content {
+  display: inline-block;
+  float: left;
+  position: relative;
+  top: 0;
+}
+.filetree-code {
+  width: 200px;
+}
+.filetree-code .line {
   clear: left;
 }
-.code-wrap code,
-.code-wrap .line,
-.code-wrap .text {
+.filetree-code .line .indent {
+  white-space: pre;
+}
+.filetree-code code,
+.filetree-code .line,
+.filetree-code .text {
+  float: left;
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
+.filetree-code code-checkbox,
+.filetree-code .line-checkbox,
+.filetree-code .text-checkbox {
   float: left;
 }
-.code-wrap code:hover .hidden,
-.code-wrap .line:hover .hidden,
-.code-wrap .text:hover .hidden {
+.filetree-help {
+  float: right;
+  color: #aaa;
+  margin-top: calc(50% - 100px);
+  text-align: center;
+}
+.filetree-help.hidden {
+  display: none;
+}
+.filetree-help,
+.filetree-content {
+  margin-left: 50px;
+  width: 400px;
+}
+.filetree-content .inner {
+  display: none;
+  margin-bottom: 20px;
+  position: relative;
+  top: 0;
+}
+.filetree-content .inner.active {
   display: block;
 }
-.code-wrap .hidden {
-  display: none;
-  position: absolute;
-  width: 500px;
-  left: -525px;
+.filetree-content .inner.active ~ .active {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
 }
+.text-code.ignored {
+  cursor: default !important;
+  font-weight: normal !important;
+  text-decoration: none !important;
+}
+.text-code:hover,
+.text.active .text-code {
+  text-decoration: underline;
+}
+.text.active .text-code {
+  font-weight: bold;
+}
+.grouping-single,
 .text-code {
   cursor: pointer;
 }
-.text-code:hover {
-  text-decoration: underline;
-}
+.build .grouping-single,
 .build .text-code {
   color: #dc322f;
 }
+.boilerplate .grouping-single,
 .boilerplate .text-code {
   color: #800080;
 }
+.configuration .grouping-single,
 .configuration .text-code {
   color: #b58900;
 }
+.markup .grouping-single,
 .markup .text-code {
   color: #859900;
 }
-.NOTE {
-  color: #b58900;
+.javascript .grouping-single,
+.javascript .text-code {
+  color: #446277;
 }
-.NOTE:before {
-  content: 'NOTE ';
-  font-weight: bold;
+.styles .grouping-single,
+.styles .text-code {
+  color: #cb4b16;
+}
+.view .grouping-single,
+.view .text-code {
+  color: #d33682;
+}
+.grouping {
+  position: relative;
 }
 .grouping-text {
   clear: both;
   display: inline-block;
 }
 .grouping-single {
-  color: #fff;
+  cursor: default;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 0;
   position: absolute;
-  left: -525px;
-  width: 525px;
+  right: 200px;
   text-align: right;
 }
-.grouping,
-.grouping-single {
-  background: #446277;
+.grouping span {
+  cursor: text;
+}
+.parent-1 {
+  height: 1.5rem;
+}
+.parent-1 .grouping-single {
+  line-height: 1.5rem;
 }
 .parent-2 {
-  height: 100px;
+  height: 3rem;
+}
+.parent-2 .grouping-single {
+  line-height: 3rem;
+}
+.parent-3 {
+  height: 4.5rem;
+}
+.parent-3 .grouping-single {
+  line-height: 4.5rem;
+}
+.parent-4 {
+  height: 6rem;
+}
+.parent-4 .grouping-single {
+  line-height: 6rem;
+}
+.parent-5 {
+  height: 7.5rem;
+}
+.parent-5 .grouping-single {
+  line-height: 7.5rem;
+}
+.parent-6 {
+  height: 9rem;
+}
+.parent-6 .grouping-single {
+  line-height: 9rem;
+}
+.parent-7 {
+  height: 10.5rem;
+}
+.parent-7 .grouping-single {
+  line-height: 10.5rem;
+}
+.parent-8 {
+  height: 12rem;
+}
+.parent-8 .grouping-single {
+  line-height: 12rem;
+}
+.parent-9 {
+  height: 13.5rem;
+}
+.parent-9 .grouping-single {
+  line-height: 13.5rem;
 }

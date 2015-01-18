@@ -1,0 +1,21 @@
+github-content-api remote: only 12 requests remaining.
+github remote: 60 of 60 requests remaining, resetting at Sun Jan 18 2015 10:11:08 GMT-0700 (MST)
+github remote: see https://github.com/component/guide/blob/master/changelogs/1.0.0.md#required-authentication for more information.
+github-content-api remote: only 11 requests remaining.
+github remote: 59 of 60 requests remaining, resetting at Sun Jan 18 2015 10:11:08 GMT-0700 (MST)
+github remote: see https://github.com/component/guide/blob/master/changelogs/1.0.0.md#required-authentication for more information.
+github-content-api remote: only 10 requests remaining.
+github remote: 10 of 60 requests remaining, resetting at Sun Jan 18 2015 10:11:08 GMT-0700 (MST)
+github remote: see https://github.com/component/guide/blob/master/changelogs/1.0.0.md#required-authentication for more information.
+github-content-api remote: only 9 requests remaining.
+github remote: 9 of 60 requests remaining, resetting at Sun Jan 18 2015 10:11:08 GMT-0700 (MST)
+github remote: see https://github.com/component/guide/blob/master/changelogs/1.0.0.md#required-authentication for more information.
+github-content-api remote: only 8 requests remaining.
+github remote: 8 of 60 requests remaining, resetting at Sun Jan 18 2015 10:11:08 GMT-0700 (MST)
+github remote: see https://github.com/component/guide/blob/master/changelogs/1.0.0.md#required-authentication for more information.
+github-content-api remote: only 7 requests remaining.
+github remote: 7 of 60 requests remaining, resetting at Sun Jan 18 2015 10:11:08 GMT-0700 (MST)
+github remote: see https://github.com/component/guide/blob/master/changelogs/1.0.0.md#required-authentication for more information.
+github-content-api remote: only 6 requests remaining.
+github remote: 6 of 60 requests remaining, resetting at Sun Jan 18 2015 10:11:08 GMT-0700 (MST)
+github remote: see https://github.com/component/guide/blob/master/changelogs/1.0.0.md#required-authentication for more information. 

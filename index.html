@@ -1,5 +1,66 @@
 
-<!DOCTYPE html><html><head><title>Poe Guide</title><link href="index.css" rel="stylesheet" type="text/css"></head><body><main><h1><span>Poe Guide</span></h1><hr class="menu-top"><menu><ul><li class="index">1</li><li><a href="#introduction">Introduction</a></li><li><a href="#gettingstarted">Getting Started</a></li><li><a href="#helloworld">Hello World</a></li></ul><ul><li class="index">2</li><li><a href="#inthebrowser">In the Browser</a></li><li><a href="#markup">Markup</a></li><li><a href="#stylesheets">Stylesheets</a></li><li><a href="#javascript">Javascript</a></li><li><a href="#astaticsite">A Static Site</a></li></ul><ul><li class="index">3</li><li><a href="#clienthypermedia">Client Hypermedia</a></li><li><a href="#databinding">Data Binding</a></li><li><a href="#forms">Forms</a></li><li><a href="#composition">Composition</a></li><li><a href="#afrontend">A Front End</a></li></ul><ul><li class="index">4</li><li><a href="#apidesign">API Design</a></li><li><a href="#hypermedia">Hypermedia</a></li><li><a href="#specsandstandards">Specs and Standards</a></li><li><a href="#amockapi">A Mock API</a></li></ul><ul><li class="index">5</li><li><a href="#full-stack">Full-Stack</a></li><li><a href="#requirements">Requirements</a></li><li><a href="#front-ends">Front-Ends</a></li><li><a href="#contracts">Contracts</a></li><li><a href="#systems">Systems</a></li></ul><ul><li class="index">6</li><li><a href="#appendix">Appendix</a></li><li><a href="#organizations">Organizations</a></li><li><a href="#resources">Resources</a></li><li><a href="#credits">Credits</a></li><li><a href="#license">License</a></li></ul></menu><hr class="menu-bottom"><h2 id="introduction">Introduction</h2><section><div class="subsection"><h3 id="overview">Overview</h3>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Poe Guide</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <main>
+      <h1><span>Poe Guide</span></h1>
+      <hr class="menu-top">
+      <menu>
+                <ul>
+                  <li class="index">1</li>
+                          <li><a href="#introduction">Introduction</a></li>
+                          <li><a href="#overview">Overview</a></li>
+                          <li><a href="#getting-started">Getting Started</a></li>
+                          <li><a href="#hello-world">Hello World</a></li>
+                </ul>
+                <ul>
+                  <li class="index">2</li>
+                          <li><a href="#in-the-browser">In the browser</a></li>
+                          <li><a href="#markup">Markup</a></li>
+                          <li><a href="#stylesheets">Stylesheets</a></li>
+                          <li><a href="#javascript">Javascript</a></li>
+                          <li><a href="#a-static-site">A Static Site</a></li>
+                </ul>
+                <ul>
+                  <li class="index">3</li>
+                          <li><a href="#client-hypermedia">Client Hypermedia</a></li>
+                          <li><a href="#data-binding">Data Binding</a></li>
+                          <li><a href="#forms">Forms</a></li>
+                          <li><a href="#composition">Composition</a></li>
+                          <li><a href="#a-front-end">A Front End</a></li>
+                </ul>
+                <ul>
+                  <li class="index">4</li>
+                          <li><a href="#api-design">API Design</a></li>
+                          <li><a href="#hypermedia">Hypermedia</a></li>
+                          <li><a href="#specs-and-standards">Specs and Standards</a></li>
+                          <li><a href="#a-mock-api">A Mock API</a></li>
+                </ul>
+                <ul>
+                  <li class="index">5</li>
+                          <li><a href="#full-stack">Full-Stack</a></li>
+                          <li><a href="#requirements">Requirements</a></li>
+                          <li><a href="#front-ends">Front-Ends</a></li>
+                          <li><a href="#contracts">Contracts</a></li>
+                          <li><a href="#systems">Systems</a></li>
+                </ul>
+                <ul>
+                  <li class="index">6</li>
+                          <li><a href="#appendix">Appendix</a></li>
+                          <li><a href="#organizations">Organizations</a></li>
+                          <li><a href="#resources">Resources</a></li>
+                          <li><a href="#credits">Credits</a></li>
+                          <li><a href="#license">License</a></li>
+                </ul>
+      </menu>
+      <hr class="menu-bottom">
+            <h2 id="introduction">Introduction</h2>
+            <section id="introduction-section" class="introduction-section">
+              <div class="subsection"><h3 id="overview">Overview</h3>
 <p>Poe is a collection of open-source tools for web developers, and Poe UI is its front-end framework.
 Although we refer to it as a framework, Poe UI is not a framework in the traditional sense that it
 has a distinctive and novel approach to specific problems; it&#39;s not written in a new and exciting language;
@@ -7,28 +68,405 @@ in some ways it&#39;s quite plain.</p>
 <p>That said, you would be hard pressed to match in performace, extensibility, and productivity. Poe UI
 works well as a quick static site and serves just as easily for standalone applications. But it&#39;s real
 purpose and strength is working hand-in-hand with a hypermedia API.</p>
-</div><div class="subsection"><h3 id="goals">Goals</h3>
-<p>TODO</p>
-</div><div class="subsection"><h3 id="getting-started">Getting Started</h3>
-<p>First off, this tutorial assumes a basic familiarity with the terminal, JS/HTML/CSS, and an editor of some kind.
-We&#39;ll also use git and node, so install if necessary.</p>
-<p>(PROTIP: if you&#39;re on OS X, it&#39;s better to install node via homebrew.)</p>
-</div></section><h2 id="inthebrowser">In the Browser</h2><section><div class="subsection"><h3 id="our-first-app">Our First App</h3>
-<p>Start by opening your terminal and running <code>npm install --global Poe UI</code>. This installs a command line utility for
-generating new Poe UI apps.</p>
-<pre><code>$ npm install --global poe-ui
-</code></pre><p>After installing, make and navigate into a directory somewhere. This will be our app&#39;s root.</p>
-<pre><code class="lang-sh">$ mkdir ~/Projects/poe-app
-$ cd ~/Projects/poe-app
-$ poe-ui-create
+<p>Before we get too ahead ourselves, let&#39;s start with the basics by generating a skeleton Poe UI app locally.</p>
+
+              </div>
+              <div class="subsection">
+                <h3>Getting Started</h3>
+                <p>
+                  First off, this tutorial assumes a basic familiarity with the terminal, JS/HTML/CSS, and an editor of some kind.
+                  As new concepts are introcued, please check out the resources we provide and revisit as necessary. We will be
+                  focussing on the very highest level features.
+                </p>
+                <p>Now, to kick things off, we will need <a href="http://nodejs.org/">node.js</a>, so install if necessary.</p>
+                <div class="NOTE">If you're on OS X, it's better to install node via **[homebrew](http://brew.sh)**.</div>
+              </div>
+              <div class="subsection">
+                <h3>Hello World</h3>
+                <p>Start by opening your terminal and install a command line utility for generating new Poe UI apps.</p><code class="block">npm install --global poe-ui</code>
+                <p>After install finishes, navigate to an empty directory somewhere. This will be our app\'s root.</p><code class="block">
+                  mkdir ~/Projects/poe-app
+                  cd ~/Projects/poe-app
+                  poe-ui-create</code>
+                <p>
+                  At this point you\'ll be prompted to give your app a name, and optional description and organization. Once
+                  everything has been created, you can start the app by running
+                </p><code class="block">
+                  npm install
+                  make start</code>
+                <div class="WARNING">
+                  If you're receiving long log messages, go
+                  <a href="https://github.com/componentjs/guide/blob/master/component/getting-started.md#setup-authentication">here</a>
+                  and make sure you are properly exposing your github credentials. If you aren\'t, you will only have 60 requests to make; after
+                  that your requests will be refused until you set up your account.
+                </div>
+                <p>After a moment to install dependencies, our output should look something like this:</p><code class="block">
+                  14:38:42 web.1   | started with pid 44663
+                  14:38:42 web.1   | [LR] auto-reload enabled
+                  14:38:42 web.1   | Server listening on port 5000</code>
+                <div class="NOTE">
+                  <p>
+                    This log style may look familiar to you; we are using **[foreman](https://github.com/ddollar/foreman)** to
+                    run on your machine exactly as it does in production.
+                  </p>
+                  <p>
+                    This means the app is up an running. So now if we navigate in our browser to `localhost:5000`, we can see the
+                    default initialized app ready for us.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <h2 id="structure">Structure</h2>
+            <section id="structure-section" class="structure-section">
+              <div class="subsection">
+                <h3>Files</h3>
+                <p>Let's start by exploring how the project is organized. Here is our current project's tree:</p>
+                <div class="filetree">
+                  <div class="filetree-help">
+                    <p>Hover over a file see more information.</p>
+                    <p>Click a file to toggle the information on/off.</p>
+                  </div>
+                  <div class="filetree-code">
+                          <div class="grouping parent-3 configuration">
+                            <h3 class="grouping-single"><span>Configuration</span></h3>
+                                  <div class="line file configuration"><code class="indent">|-- </code>
+                                    <div class="text"><code class="text-code">.env</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner"><p>An <code>.env</code> file controls your environment. Unlike other project files, it should not be
+version controlled, as doing so may reveal sensitive information.</p>
+<p>Your environment variables are the most fundamental values to your application, and in your Poe app it will likely
+provide your API&#39;s URL at the very least.</p>
+<p>Example:</p>
+<pre><code class="lang-sh">API_URL=http://localhost:5001
+NODE_ENV=development
 </code></pre>
-<p>At this point you&#39;ll be prompted to give your app a name, and optional description and organization. Once
-everything has been created, you can start the app by running</p>
-<pre><code>make start
-</code></pre><p>After a second, the output should look something like this:</p>
-<pre><code>14:38:42 web.1   | started with pid 44663
-14:38:42 web.1   | [LR] auto-reload enabled
-14:38:42 web.1   | Server listening on port 5000
-</code></pre><p>This means the app is up an running. So now if we navigate in our browser to <code>localhost:5000</code>, we can see the
-default display screen Poe UI makes for us.</p>
-</div></section></main></body></html>
+<p>For more information, read Heroku&#39;s <a href="https://devcenter.heroku.com/articles/config-vars#example">write-up</a>.</p>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file configuration"><code class="indent">|-- </code>
+                                    <div class="text"><code class="text-code">package.json</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner"><p>The <code>package.json</code> is the configuration file for any node project.</p>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file configuration show"><code class="indent">|-- </code>
+                                    <div class="text"><code class="text-code">component.json</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner"><p><a href="http://component.github.io/">Component</a> is a static asset tool. It&#39;s a dependency manager, distributor
+as well as a general-purpose task runner. You can think of it as <a href="https://www.npmjs.com">npm</a> for all
+things static: javascript, styles, images, fonts, etc.</p>
+<p>To install, update, or remove components from your project, you can either</p>
+<ul>
+<li>edit your project&#39;s <code>component.json</code> file by hand (probably simpler)</li>
+<li>or use the component <a href="https://github.com/componentjs/guide/blob/master/component/getting-started.md">CLI</a></li>
+</ul>
+<p>You don&apos;t have to worry about actually building the components however; when Poe UI run, it watches for changes
+to your <code>component.json</code> and will install/remove/rebuild as necessary.</p>
+<p>As far as structure goes, the <code>component.json</code> works almost identically to npm&apos;s <code>package.json</code>.</p>
+<div class='.NOTE'>
+Component pushed the community in a much more modular direction in 2012 - 2014, but has fallen out of popularity as
+npm is becoming the standard for front- and back-end JS management. In the upcoming stable version of Poe UI this file
+is replaced entirely by npm.
+</div>
+
+
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                          <div class="grouping parent-3 boilerplate">
+                            <h3 class="grouping-single"><span>Boilerplate</span></h3>
+                                  <div class="line file boilerplate"><code class="indent">|-- </code>
+                                    <div class="text"><code class="text-code">Makefile</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner"><p>  The Makefile never has to be touched after
+  a project is initialized. If you&apos;re interested
+  in how it works or are exeriencing an an error, refer to the following files:</p>
+<p>  poe-ui / <a href="https://github.com/poegroup/poe-ui/blob/master/tasks.mk">task.mk</a>
+  poe-ui-kit / <a href="https://raw.githubusercontent.com/poegroup/poe-ui-kit/master/build.mk">build.mk</a></p>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file boilerplate"><code class="indent">|-- </code>
+                                    <div class="text"><code class="text-code">Procfile</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner"><p>Procfile are used by the Heroku platform, and this file is referenced by foreman
+at startup. Generally, this file does not need to be touched.</p>
+<p><a href="https://devcenter.heroku.com/articles/procfile">More information</a></p>
+<p>.NOTE This file is going away in the upcoming release.</p>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file boilerplate"><code class="indent">|-- </code>
+                                    <div class="text"><code class="text-code">app.js</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner"><p>This is the node.js entry point for your UI application. It is only a few lines long, and
+rarely if ever needs to be modified.</p>
+<p>It calls the <strong>poe-ui</strong> npm module with some high-level configuration, and also sets the API
+namespace to <strong>/api</strong> by default.</p>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                          <div class="grouping parent-7 build">
+                            <h3 class="grouping-single"><span>Build</span></h3>
+                                  <div class="line file build"><code class="indent">|-- </code>
+                                    <div class="text"><code class="text-code">build</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner"><p>hello there</p>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file build"><code class="indent">|   |-- </code>
+                                    <div class="text"><code class="text-code">app.js</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file build"><code class="indent">|   |-- </code>
+                                    <div class="text"><code class="text-code">ie-fixes.js</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file build"><code class="indent">|   |-- </code>
+                                    <div class="text"><code class="text-code">require.js</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file build"><code class="indent">|   |-- </code>
+                                    <div class="text"><code class="text-code">script.js</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file build"><code class="indent">|   |-- </code>
+                                    <div class="text"><code class="text-code">style.css</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file build"><code class="indent">|   `-- </code>
+                                    <div class="text"><code class="text-code">vendor.js</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                          <div class="grouping parent-1">
+                            <h3 class="grouping-single"><span>  </span></h3>
+                                  <div class="line file"><code class="indent">|-- </code>
+                                    <div class="text"><code class="text-code ignored">public</code>
+                                    </div>
+                                  </div>
+                          </div>
+                          <div class="grouping parent-7 javascript">
+                            <h3 class="grouping-single"><span>Javascript</span></h3>
+                                  <div class="line file"><code class="indent">|   |-- </code>
+                                    <div class="text"><code class="text-code">javascripts</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file"><code class="indent">|   |   |-- </code>
+                                    <div class="text"><code class="text-code">controllers</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file"><code class="indent">|   |   |-- </code>
+                                    <div class="text"><code class="text-code">directives</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file"><code class="indent">|   |   |-- </code>
+                                    <div class="text"><code class="text-code">filters</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file"><code class="indent">|   |   |-- </code>
+                                    <div class="text"><code class="text-code">index.js</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file"><code class="indent">|   |   |-- </code>
+                                    <div class="text"><code class="text-code">routes.js</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file"><code class="indent">|   |   `-- </code>
+                                    <div class="text"><code class="text-code">services</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                          <div class="grouping parent-3 partials">
+                            <h3 class="grouping-single"><span>Partials</span></h3>
+                                  <div class="line file markup"><code class="indent">|   |-- </code>
+                                    <div class="text"><code class="text-code">partials</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file markup"><code class="indent">|   |   |-- </code>
+                                    <div class="text"><code class="text-code">header.jade</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file markup"><code class="indent">|   |   `-- </code>
+                                    <div class="text"><code class="text-code">index.jade</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                          <div class="grouping parent-4 styles">
+                            <h3 class="grouping-single"><span>Styles</span></h3>
+                                  <div class="line file"><code class="indent">|   `-- </code>
+                                    <div class="text"><code class="text-code">stylesheets</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file"><code class="indent">|       |-- </code>
+                                    <div class="text"><code class="text-code">index.styl</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file"><code class="indent">|       |-- </code>
+                                    <div class="text"><code class="text-code">main.styl</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file"><code class="indent">|       `-- </code>
+                                    <div class="text"><code class="text-code">variables.styl</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                          <div class="grouping parent-2 view">
+                            <h3 class="grouping-single"><span>View</span></h3>
+                                  <div class="line file"><code class="indent">`-- </code>
+                                    <div class="text"><code class="text-code">views</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="line file"><code class="indent">    `-- </code>
+                                    <div class="text"><code class="text-code">index.jade</code>
+                                      <input type="checkbox" hidden class="text-checkbox">
+                                      <div class="inner">aaa
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+      <script>
+var fileContent = document.createElement('div');
+fileContent.className = 'filetree-content';
+var subsection = document.body.querySelector('.structure-section .filetree');
+subsection.appendChild(fileContent);
+var fileHelp = document.querySelector('.filetree-help');
+
+var lines = document.querySelectorAll('.line .text-code');
+var arr = [];
+for(var i = 0; i < lines.length; i++) arr[i] = lines[i];
+
+arr.forEach(function(line, idx){
+  line = arr[idx];
+  if (~line.className.indexOf('ignored')) return;
+  var content = line.parentElement.children[line.parentElement.children.length - 1]
+  if (content.className !== 'inner') content = false;
+  else fileContent.appendChild(content);
+
+  line.addEventListener('mouseenter', toggle);
+  line.addEventListener('mouseleave', toggle);
+  line.addEventListener('click', toggle);
+
+  function toggle(ev) {
+    var box = ev.target.nextElementSibling;
+    var parent = ev.target.parentElement;
+    var parentActive = ~parent.className.indexOf('active');
+    if (ev.type === 'click') box.checked = !box.checked;
+    if (ev.type === 'mouseleave' && !box.checked && parentActive) activate(parent);
+    if (ev.type === 'mouseenter' && !parentActive) deactivate(parent);
+  }
+
+  var timeout;
+
+  function activate(el) {
+    el.className = 'text';
+    content.className = 'inner';
+    fileHelp.className = 'filetree-help hidden'
+  }
+
+  function deactivate(el) {
+    el.className = 'text active';
+    content.className = 'inner active';
+    reset();
+  }
+
+  function clear() {
+    fileHelp.className = 'filetree-help hidden'
+    window.clearTimeout(timeout);
+    timeout = false;
+  }
+
+  function reset() {
+    clear();
+    timeout = window.setTimeout(reveal, 5000);
+  }
+
+  function reveal() {
+    var active = document.querySelectorAll('.filetree-content .active')
+    if (active.length) return;
+    fileHelp.className = 'filetree-help'
+  }
+});
+
+      </script>
+    </main>
+  </body>
+</html>

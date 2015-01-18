@@ -20,6 +20,9 @@ font-size--base  = 12px
 
 //- styles
 
+html
+  font-size 14px
+
 body
   overflow-x hidden
 
@@ -60,6 +63,10 @@ hr
   &.menu-bottom
     margin-top 0
 
+blockquote
+  margin-right 5rem
+  margin-left 3rem
+
 main
   width 1000px
   margin 0 auto
@@ -81,14 +88,12 @@ menu
     width 33%
     .index
       cursor default
-      background #ccc
       font-size 10px
       font-weight bold
       left -25px
       line-height 1.75
       opacity .5
       position absolute
-
 
   li:nth-child(2)
     font-weight bold
@@ -114,57 +119,119 @@ section
 
   .subsection
     position relative
-    margin-bottom 50px
+    margin-bottom 60px
 
-  h3
-    font-size 12px
-    font-weight bold
-    position relative
-    top 0
-    text-align right
-    left -100%
-    margin-right 50px
-    margin-bottom -15px
+$side-header
+  font-weight bold
+  margin-right 50px
+  margin-top 0
+  position absolute
+  right 700px
+  text-align right
 
+section h3
+  top 0
+  font-size 12px
+  @extends $side-header
+
+create-label(sel, label, color)
+  .{sel}
+    color lighten(desaturate(color, 50%), 25%)
+    margin 20px 0
+    &:before
+      content label
+      color color
+      @extends $side-header
+
+create-label('NOTE', 'Note', yellow)
+create-label('WARNING', 'Warning', orange)
+
+.filetree-content .inner pre
+code.block-wide
 code.block
   display inline-block
-  margin-top 30px
-  margin-bottom 40px
-  margin-left 20%
+  margin-top 25px
+  margin-bottom 45px
+  margin-left 25%
   white-space pre-line
-  width 500px
 
-.code-wrap
+code.block-wide
+  width 700px
+  margin-left 0
+  overflow-x scroll
+  white-space pre
+  font-size 10px
+
+.filetree
   display inline-block
-  margin-top 30px
+  margin-top 50px
   margin-bottom @margin-top
-  margin-left 75%
-  position relative
+  &-help
+  &-code
+  &-content
+    display inline-block
+    float left
+    position relative
+    top 0
+
+.filetree-code
+  width 200px
 
   .line
     clear left
+    .indent
+      white-space pre
 
   code
   .line
   .text
     float left
+    height 1.5rem
+    line-height 1.5rem
+    &-checkbox
+      float left
 
-    &:hover .hidden
-      display block
-
-  // .show .hidden
-  //   display block!important
-
-  .hidden
+.filetree-help
+  float right
+  color #aaa
+  margin-top calc(50% - 100px)
+  text-align center
+  &.hidden
     display none
-    position absolute
-    width 500px
-    left -525px
+
+.filetree-help
+.filetree-content
+  margin-left 50px
+  width 400px
+
+.filetree-content
+  .inner
+    display none
+    margin-bottom 20px
+    position relative
+    top 0
+    &.active
+      display block
+      ~ .active
+        margin-top 20px
+        padding-top 20px
+        border-top 1px solid #ddd
 
 .text-code
-  cursor pointer
+  &.ignored
+    cursor default !important
+    font-weight normal !important
+    text-decoration none !important
   &:hover
+  .text.active &
     text-decoration underline
+  .text.active &
+    font-weight bold
+
+
+.grouping-single
+.text-code
+  cursor pointer
   .build &
     color red
   .boilerplate &
@@ -173,26 +240,33 @@ code.block
     color yellow
   .markup &
     color green
+  .javascript &
+    color blue
+  .styles &
+    color orange
+  .view &
+    color magenta
 
-.NOTE
-  color yellow
-  &:before
-    content 'NOTE '
-    font-weight bold
 
 .grouping
+  position relative
   &-text
     clear both
     display inline-block
   &-single
-    color white
+    cursor default
+    font-weight normal
+    margin-bottom 0
+    margin-top 0
     position absolute
-    left -525px
-    width 525px
+    right 200px
     text-align right
-  &
-  &-single
-    background blue
+  span
+    cursor text
 
-.parent-2
-  height 100px
+_line = 17px
+for n in 1 2 3 4 5 6 7 8 9
+  .parent-{n}
+    height unit(n * 1.5, 'rem')
+    .grouping-single
+      line-height unit(n * 1.5, 'rem')
