@@ -12,16 +12,17 @@ block menu
         li.index= index
         block
     mixin listitem(title)
-      - var href = '#' + title.split(' ').join('').toLowerCase()
+      - var href = '#' + title.split(' ').join('-').toLowerCase()
       li: a(href=href)= title
 
     +list(1)
       +listitem('Introduction')
+      +listitem('Overview')
       +listitem('Getting Started')
       +listitem('Hello World')
 
     +list(2)
-      +listitem('In the Browser')
+      +listitem('In the browser')
       +listitem('Markup')
       +listitem('Stylesheets')
       +listitem('Javascript')
@@ -77,58 +78,73 @@ block content
         works well as a quick static site and serves just as easily for standalone applications. But it's real
         purpose and strength is working hand-in-hand with a hypermedia API.
 
-    .subsection
-      :markdown
-        ### Goals
-
-        TODO
+        Before we get too ahead ourselves, let's start with the basics by generating a skeleton Poe UI app locally.
 
     .subsection
-      :markdown
-        ### Getting Started
+      h3
+        | Getting Started
 
-        First off, this tutorial assumes a basic familiarity with the terminal, JS/HTML/CSS, and an editor of some kind.
-        We'll also use git and node, so install if necessary.
+      p
+        | First off, this tutorial assumes a basic familiarity with the terminal, JS/HTML/CSS, and an editor of some kind.
+        | As new concepts are introcued, please check out the resources we provide and revisit as necessary. We will be
+        | focussing on the very highest level features.
 
-        (PROTIP: if you're on OS X, it's better to install node via homebrew.)
+      p
+        | Now, to kick things off, we will need <a href="http://nodejs.org/">node.js</a>, so install if necessary.
 
+      .NOTE
+        | If you're on OS X, it's better to install node via **[homebrew](http://brew.sh)**.
 
-  +section-heading('In the Browser')
-      
+      .WARNING
+        | Go <a href="https://github.com/componentjs/guide/blob/master/component/getting-started.md#setup-authentication">here</a>
+        | and make sure you are properly exposing your github credentials. If you aren\'t, you will only have 60 requests to make; after
+        | that your requests will be refused until you set up your account.
+
+    .subsection
+      h3
+        | Hello World
+
+      p
+        | Start by opening your terminal and install a command line utility for generating new Poe UI apps.
+
+      code.block
+        | npm install --global poe-ui
+
+      p
+        | After install finishes, navigate to an empty directory somewhere. This will be our app\'s root.
+
+      code.block
+        | mkdir ~/Projects/poe-app
+        | cd ~/Projects/poe-app
+        | poe-ui-create
+
+      p
+        | At this point you\'ll be prompted to give your app a name, and optional description and organization. Once
+        | everything has been created, you can start the app by running
+
+      code.block
+        | make start
+
+      p
+        | After a moment to start, our output should look something like this:
+
+      code.block
+        | 14:38:42 web.1   | started with pid 44663
+        | 14:38:42 web.1   | [LR] auto-reload enabled
+        | 14:38:42 web.1   | Server listening on port 5000
+
+      .NOTE
+        br
+        | This log style may look familiar to you; we are using **[foreman](https://github.com/ddollar/foreman)** to
+        | run on your machine exactly as it does in production.
+        br
+        | This means the app is up an running. So now if we navigate in our browser to `localhost:5000`, we can see the
+        | default initialized app ready for us.
+
+  //- TODO
+  //- add screenshot of initialized app
+
+  +section-heading('Structure')
+
   section
-    .subsection
-      :markdown
-        ### Our First App
-
-        Start by opening your terminal and running `npm install --global Poe UI`. This installs a command line utility for
-        generating new Poe UI apps.
-
-        ```
-        $ npm install --global poe-ui
-        ```
-
-        After installing, make and navigate into a directory somewhere. This will be our app's root.
-
-        ```sh
-        $ mkdir ~/Projects/poe-app
-        $ cd ~/Projects/poe-app
-        $ poe-ui-create
-        ```
-
-        At this point you'll be prompted to give your app a name, and optional description and organization. Once
-        everything has been created, you can start the app by running
-
-        ```
-        make start
-        ```
-
-        After a second, the output should look something like this:
-
-        ```
-        14:38:42 web.1   | started with pid 44663
-        14:38:42 web.1   | [LR] auto-reload enabled
-        14:38:42 web.1   | Server listening on port 5000
-        ```
-
-        This means the app is up an running. So now if we navigate in our browser to `localhost:5000`, we can see the
-        default display screen Poe UI makes for us.
+    .subsection: include ./includes/files

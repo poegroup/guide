@@ -419,7 +419,7 @@ hr.menu-bottom {
 }
 main {
   width: 1000px;
-  margin-left: 25%;
+  margin: 0 auto;
 }
 ul,
 menu {
@@ -431,14 +431,15 @@ menu {
   position: relative;
   width: 800px;
 }
-ul {
+menu ul {
   list-style: none;
   float: left;
   position: relative;
   width: 33%;
 }
-ul .index {
+menu ul .index {
   cursor: default;
+  background: #ccc;
   font-size: 10px;
   font-weight: bold;
   left: -25px;
@@ -451,16 +452,16 @@ ul .index {
   filter: alpha(opacity=50);
   position: absolute;
 }
-li:nth-child(2) {
+menu li:nth-child(2) {
   font-weight: bold;
 }
-li:nth-child(2) a {
+menu li:nth-child(2) a {
   color: #446277;
 }
-li:nth-child(2) a:focus {
+menu li:nth-child(2) a:focus {
   outline: 0;
 }
-li:nth-child(2) a:before {
+menu li:nth-child(2) a:before {
   content: '᚛';
   left: -15px;
   opacity: 0.25;
@@ -507,7 +508,80 @@ section h3 {
   margin-right: 50px;
   margin-bottom: -15px;
 }
-pre {
+code.block {
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 20%;
+  white-space: pre-line;
+  width: 500px;
+}
+.code-wrap {
+  display: inline-block;
   margin-top: 30px;
   margin-bottom: 30px;
+  margin-left: 75%;
+  position: relative;
+}
+.code-wrap .line {
+  clear: left;
+}
+.code-wrap code,
+.code-wrap .line,
+.code-wrap .text {
+  float: left;
+}
+.code-wrap code:hover .hidden,
+.code-wrap .line:hover .hidden,
+.code-wrap .text:hover .hidden {
+  display: block;
+}
+.code-wrap .hidden {
+  display: none;
+  position: absolute;
+  width: 500px;
+  left: -525px;
+}
+.text-code {
+  cursor: pointer;
+}
+.text-code:hover {
+  text-decoration: underline;
+}
+.build .text-code {
+  color: #dc322f;
+}
+.boilerplate .text-code {
+  color: #800080;
+}
+.configuration .text-code {
+  color: #b58900;
+}
+.markup .text-code {
+  color: #859900;
+}
+.NOTE {
+  color: #b58900;
+}
+.NOTE:before {
+  content: 'NOTE ';
+  font-weight: bold;
+}
+.grouping-text {
+  clear: both;
+  display: inline-block;
+}
+.grouping-single {
+  color: #fff;
+  position: absolute;
+  left: -525px;
+  width: 525px;
+  text-align: right;
+}
+.grouping,
+.grouping-single {
+  background: #446277;
+}
+.parent-2 {
+  height: 100px;
 }

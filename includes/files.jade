@@ -1,0 +1,102 @@
+h3 Files
+
+p Let's start by exploring how the project is organized. Here is our current project's tree:
+
+.code-wrap
+
+  mixin line(indent, text, classes)
+    .line.file(class=classes)
+      code.indent=indent
+      .text
+        code.text-code=text
+        .hidden
+          block
+
+  mixin grouping(text, classes)
+    .grouping(class=classes)
+      .grouping-single= text
+      .grouping-lines
+        block
+        
+
+
+  +grouping("a grouping", ["parent-2 configuration"])
+    +line("|-- ", "package.json", ["configuration"])
+      :markdown
+        The `package.json` is the configuration file for any node project.
+
+    +line("|-- ", "component.json", ["configuration show"])
+      p
+        | <a href="http://component.github.io/">Component</a> is a static asset tool. It's a dependency manager, distributor
+        | as well as a general-purpose task runner. You can think of it as <a href="https://www.npmjs.com">npm</a> for all
+        | things static: javascript, styles, images, fonts, etc.
+
+      p
+        | To install, update, or remove components from your project, you can either
+
+      ul
+        li edit your project's <pre>component.json</pre> file by hand (probably simpler)
+        li or use the component <a href="https://github.com/componentjs/guide/blob/master/component/getting-started.md">CLI</a>
+
+      p
+        | You don&apos;t have to worry about actually building the components however; when Poe UI run, it watches for changes
+        | to your <pre>component.json</pre> and will install/remove/rebuild as necessary.
+
+        | As far as structure goes, the <pre>component.json</pre> works almost identically to npm&apos;s <pre>package.json</pre>.
+
+      .NOTE
+        | Component pushed the community in a much more modular direction in 2012 - 2014, but has fallen out of popularity as
+        | npm is becoming the standard for front- and back-end JS management. In the upcoming stable version of Poe UI this file
+        | is replaced entirely by npm.
+
+  +line("|-- ", "Makefile", ["boilerplate"])
+    :markdown
+      The Makefile never has to be touched after
+      a project is initialized. If you&apos;re interested
+      in how it works or are exeriencing an an error, refer to the following files:
+
+      poe-ui / [task\.mk](https://github.com/poegroup/poe-ui/blob/master/tasks.mk)
+      poe-ui-kit / [build\.mk](https://raw.githubusercontent.com/poegroup/poe-ui-kit/master/build.mk)
+
+  +line("|-- ", "Procfile.dev", ["boilerplate"])
+    :markdown
+      Procfile are used by the Heroku platform, and this file is referenced by foreman
+      at startup. Generally, this file does not need to be touched.
+
+      [More information](https://devcenter.heroku.com/articles/procfile)
+
+    .NOTE This file is going away in the upcoming release.
+
+  +line("|-- ", "app.js", ["boilerplate"])
+    :markdown
+      This is the node.js entry point for your UI application. It is only a few lines long, and
+      rarely if ever needs to be modified.
+
+      It calls the **poe-ui** npm module with some high-level configuration, and also sets the API
+      namespace to **/api** by default.
+
+  +line("|-- ", "build", ["build"])
+    include:md files/build
+  +line("|   |-- ", "app.js", ["build"]) aaa
+  +line("|   |-- ", "ie-fixes.js", ["build"]) aaa
+  +line("|   |-- ", "require.js", ["build"]) aaa
+  +line("|   |-- ", "script.js", ["build"]) aaa
+  +line("|   |-- ", "style.css", ["build"]) aaa
+  +line("|   `-- ", "vendor.js", ["build"]) aaa
+  +line("|-- ", "public") aaa
+  +line("|   |-- ", "javascripts") aaa
+  +line("|   |   |-- ", "controllers") aaa
+  +line("|   |   |-- ", "directives") aaa
+  +line("|   |   |-- ", "filters") aaa
+  +line("|   |   |-- ", "index.js") aaa
+  +line("|   |   |-- ", "routes.js") aaa
+  +line("|   |   `-- ", "services") aaa
+  +line("|   |-- ", "partials", ["markup"]) aaa
+  +line("|   |   |-- ", "header.jade", ["markup"]) aa
+  +line("|   |   `-- ", "index.jade", ["markup"]) aaa
+  +line("|   `-- ", "stylesheets") aaa
+  +line("|       |-- ", "index.styl") aaa
+  +line("|       |-- ", "main.styl") aaa
+  +line("|       `-- ", "variables.styl") aaa
+  +line("`-- ", "views") aaa
+  +line("    `-- ", "index.jade") aaa

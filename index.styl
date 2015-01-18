@@ -62,7 +62,7 @@ hr
 
 main
   width 1000px
-  margin-left 25%
+  margin 0 auto
 
 ul
 menu
@@ -74,34 +74,36 @@ menu
   position relative
   width 800px
 
-ul
-  list-style none
-  float left
-  position relative
-  width 33%
-  .index
-    cursor default
-    font-size 10px
-    font-weight bold
-    left -25px
-    line-height 1.75
-    opacity .5
-    position absolute
-
-li:nth-child(2)
-  font-weight bold
-  a
-    color palette--blue
-    &:focus
-      outline 0
-    &:before
-      content '᚛'
-      left -15px
-      opacity .25
+  ul
+    list-style none
+    float left
+    position relative
+    width 33%
+    .index
+      cursor default
+      background #ccc
+      font-size 10px
+      font-weight bold
+      left -25px
+      line-height 1.75
+      opacity .5
       position absolute
-      transition-property color
-      transition-duration 150ms
-      transition-timing-function linear
+
+
+  li:nth-child(2)
+    font-weight bold
+    a
+      color palette--blue
+      &:focus
+        outline 0
+      &:before
+        content '᚛'
+        left -15px
+        opacity .25
+        position absolute
+        transition-property color
+        transition-duration 150ms
+        transition-timing-function linear
 
 //- section stylus
 
@@ -124,6 +126,73 @@ section
     margin-right 50px
     margin-bottom -15px
 
-pre
+code.block
+  display inline-block
+  margin-top 30px
+  margin-bottom 40px
+  margin-left 20%
+  white-space pre-line
+  width 500px
+
+.code-wrap
+  display inline-block
   margin-top 30px
   margin-bottom @margin-top
+  margin-left 75%
+  position relative
+
+  .line
+    clear left
+
+  code
+  .line
+  .text
+    float left
+
+    &:hover .hidden
+      display block
+
+  // .show .hidden
+  //   display block!important
+
+  .hidden
+    display none
+    position absolute
+    width 500px
+    left -525px
+
+.text-code
+  cursor pointer
+  &:hover
+    text-decoration underline
+  .build &
+    color red
+  .boilerplate &
+    color purple
+  .configuration &
+    color yellow
+  .markup &
+    color green
+
+.NOTE
+  color yellow
+  &:before
+    content 'NOTE '
+    font-weight bold
+
+.grouping
+  &-text
+    clear both
+    display inline-block
+  &-single
+    color white
+    position absolute
+    left -525px
+    width 525px
+    text-align right
+  &
+  &-single
+    background blue
+
+.parent-2
+  height 100px
