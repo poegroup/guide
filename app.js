@@ -41,8 +41,11 @@ app.use(function(req, res, next) {
 });
 
 // stylus
+// app.use(function(req, res, next){
+//   req.url = req.url.replace(/\.styl$/, '.css');
+// });
+
 app.use(function(req, res, next){
-  req.url = req.url.replace(/\.styl$/, '.css');
   app.use(stylus.middleware({ src: __dirname }));
   next();
 });
@@ -65,7 +68,7 @@ var locals = {
 
 // jade
 app.use(function(req, res, next){
-  if (!req.url.match(/\.jade$/)) return next();
+  if (req.url !== '/' && !req.url.match(/\.jade$/)) return next();
   var file = path.join(__dirname, 'index.jade');
   fs.readFile(file, 'utf8', function(err, str){
     if (err) return next(err);
