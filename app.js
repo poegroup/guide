@@ -59,7 +59,6 @@ var locals = {
   'header.jade': require('./raw/public/partials/header.jade')(),
   'index.jade': require('./raw/public/partials/index.jade')(),
   'index.styl': require('./raw/public/stylesheets/index.styl')(),
-  'ie-fixes.jade': require('./raw/build/ie-fixes.jade')(),
   'package.json': JSON.stringify(require('./raw/package.json'), null, '  '),
   'component.json': JSON.stringify(require('./raw/component.json'), null, '  ')
 };
