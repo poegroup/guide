@@ -1,7 +1,7 @@
 
 var fileContent = document.createElement('div');
 fileContent.className = 'filetree-content';
-var subsection = document.body.querySelector('.structure-section .filetree');
+var subsection = document.body.querySelector('.filetree');
 subsection.appendChild(fileContent);
 var fileHelp = document.querySelector('.filetree-help');
 

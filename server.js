@@ -15,30 +15,32 @@ var is = require('is');
 
 var server = require('express')();
 
-var locals;
-var pending = 0;
+var quotes;
 
-var renderers = {
-  markdown: md,
-  text: function(a, fn) { fn(null, a) }
-}
+server.get('/', function(req, res, next) {
+  res.redirect('/index.jade');
+});
 
-function parse(obj, opts, fn) {
-  return fn(null, obj);
-}
-
-
+// parse and load quotes
 server.use(function(req, res, next) {
-  if (typeof locals === 'object') return next();
-  fs.readFile('./locals.yaml', 'utf8', function(err, res) {
+  if (typeof quotes === 'object') return next();
+  fs.readFile('./quotes.yaml', 'utf8', function(err, res) {
     if (err) return console.error(err);
     parse(yaml.safeLoad(res), null, function(err, output) {
       if (err) console.error(err);
-      locals = output;
-      console.log(JSON.stringify(locals, null, '  '));
+      quotes = output;
       next();
     });
   })
+});
+
+// get one random quote
+function q(){return quotes[Math.floor(Math.random()*quotes.length)]};
+
+// get a random quote
+server.use(function(req, res, next) {
+  res.locals.quotes = [q()];
+  next();
 });
 
 // stylus
@@ -55,7 +57,22 @@ server.use(function(req, res, next){
     if (err) return next(err);
     try {
       var fn = jade.compile(str, { filename: file, pretty: true });
-      str = fn(locals);
+      str = fn({
+        quotes: res.locals.quotes,
+        'app.js': require('./raw/app.js')(),
+        '.env': require('./raw/.env')(),
+        '.foreman': require('./raw/.foreman')(),
+        'Makefile': require('./raw/Makefile')(),
+        'Procfile.dev': require('./raw/Procfile.dev')(),
+        'index.js': require('./raw/public/javascripts/index.js')(),
+        'routes.js': require('./raw/public/javascripts/routes.js')(),
+        'header.jade': require('./raw/public/partials/header.jade')(),
+        'index.jade': require('./raw/public/partials/index.jade')(),
+        'index.styl': require('./raw/public/stylesheets/index.styl')(),
+        'ie-fixes.jade': require('./raw/build/ie-fixes.jade')(),
+        'package.json': JSON.stringify(require('./raw/package.json'), null, '  '),
+        'component.json': JSON.stringify(require('./raw/component.json'), null, '  ')
+      });
       res.setHeader('Content-Type', 'text/html');
       res.setHeader('Content-Length', Buffer.byteLength(str));
       res.end(str);
@@ -85,3 +102,7 @@ var port = process.env.PORT || 3000;
 server.listen(port, function () {
   console.log('\033[90mserving \033[36m%s\033[90m on port \033[96m%d\033[0m', __dirname, port);
 });
+
+function parse(obj, opts, fn) {
+  return fn(null, obj);
+}

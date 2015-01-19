@@ -1,4 +1,3 @@
-h3 Files
 
 p Let's start by exploring how the project is organized. Here is our current project's tree:
 
@@ -17,6 +16,8 @@ p Let's start by exploring how the project is organized. Here is our current pro
             code.text-code= text
             input.text-checkbox(type='checkbox' hidden)
             .inner
+              if locals[text]
+                div.raw-file(class=classes)= locals[text]
               block
           else
             code.text-code.ignored= text
@@ -34,41 +35,35 @@ p Let's start by exploring how the project is organized. Here is our current pro
 
     +grouping("boilerplate", ["parent-3 boilerplate"])
       +line("|-- ", "Makefile", ["boilerplate"]): include:md files/Makefile.md
-      +line("|-- ", "Procfile", ["boilerplate"]): include:md files/Procfile.md
+      +line("|-- ", "Procfile.dev", ["boilerplate"]): include:md files/Procfile.md
       +line("|-- ", "app.js", ["boilerplate"]): include:md files/app.js.md
 
     +grouping("build", ["parent-7 build"])
       +line("|-- ", "build", ["build"]): include:md files/build
-      +line("|   |-- ", "app.js", ["build"]) aaa
-      +line("|   |-- ", "ie-fixes.js", ["build"]) aaa
-      +line("|   |-- ", "require.js", ["build"]) aaa
-      +line("|   |-- ", "script.js", ["build"]) aaa
-      +line("|   |-- ", "style.css", ["build"]) aaa
-      +line("|   `-- ", "vendor.js", ["build"]) aaa
+      +line("|   |-- ", "app.js", ["build"])
+      +line("|   |-- ", "ie-fixes.js", ["build"])
+      +line("|   |-- ", "require.js", ["build"])
+      +line("|   |-- ", "script.js", ["build"])
+      +line("|   |-- ", "style.css", ["build"])
+      +line("|   `-- ", "vendor.js", ["build"])
 
     +grouping("  ", ["parent-1"])
-      +line("|-- ", "public", [], true) aaa
+      +line("|-- ", "public", [], true)
 
-    +grouping("javascript", ["parent-7 javascript"])
-      +line("|   |-- ", "javascripts") aaa
-      +line("|   |   |-- ", "controllers") aaa
-      +line("|   |   |-- ", "directives") aaa
-      +line("|   |   |-- ", "filters") aaa
-      +line("|   |   |-- ", "index.js") aaa
-      +line("|   |   |-- ", "routes.js") aaa
-      +line("|   |   `-- ", "services") aaa
+    +grouping("javascript", ["parent-3 javascript"])
+      +line("|   |-- ", "javascripts")
+      +line("|   |   |-- ", "index.js")
+      +line("|   |   `-- ", "routes.js")
 
     +grouping("partials", ["parent-3 partials"])
-      +line("|   |-- ", "partials", ["markup"]) aaa
-      +line("|   |   |-- ", "header.jade", ["markup"]) aa
-      +line("|   |   `-- ", "index.jade", ["markup"]) aaa
+      +line("|   |-- ", "partials", ["markup"]): include:md files/partials.md
+      +line("|   |   |-- ", "header.jade", ["markup"])
+      +line("|   |   `-- ", "index.jade", ["markup"])
 
-    +grouping("styles", ["parent-4 styles"])
-      +line("|   `-- ", "stylesheets") aaa
-      +line("|       |-- ", "index.styl") aaa
-      +line("|       |-- ", "main.styl") aaa
-      +line("|       `-- ", "variables.styl") aaa
+    +grouping("styles", ["parent-2 styles"])
+      +line("|   `-- ", "stylesheets", ["styles"])
+      +line("|       `-- ", "index.styl", ["styles"])
 
     +grouping("view", ["parent-2 view"])
-      +line("`-- ", "views") aaa
-      +line("    `-- ", "index.jade") aaa
+      +line("`-- ", "views")
+      +line("    `-- ", "index.jade")

@@ -1,0 +1,21 @@
+module.exports = function anonymous(obj) {
+
+  function escape(html) {
+    return String(html)
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  };
+
+  function section(obj, prop, negate, thunk) {
+    var val = obj[prop];
+    if (Array.isArray(val)) return val.map(thunk).join('');
+    if ('function' == typeof val) return val.call(obj, thunk(obj));
+    if (negate) val = !val;
+    if (val) return thunk(obj);
+    return '';
+  };
+
+  return "// define core styles\n\nhtml\n  font-family sans-serif\n\nbody\nbody > div\n  height 100%\n  width 100%\n\nbody\n  position absolute\n  margin 0\n  text-align center\n  > div\n    display flex\n    flex-direction column\n    justify-content center\n\nh1\n  font-weight 100\n  margin-top 0\n\na\n  padding 10px\n"
+}

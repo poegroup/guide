@@ -1,7 +1,7 @@
 @require './node_modules/shoelace-ui-palette-solarized'
 
 //- color vars
-
+a--color           = lighten(desaturate(palette--blue, 80%), 45%)
 palette--blue      = darken(desaturate(palette--blue, 60%), 25%)
 blue               = palette--blue
 palette--gray-base = blue
@@ -9,9 +9,11 @@ a--hover-color     = inherit
 a--visited-color   = inherit
 hr--border         = lighten(blue, 80%)
 
-//- size vars
+//- font vars
 
-font-size--base  = 12px
+font-size--base  = 11px
+font-family--monospace = 'source-code-pro'
+font-family--sans-serif = 'source-code-pro', 'Helvetica Neue', sans-serif
 
 //- dependencies
 
@@ -50,6 +52,13 @@ h2
   right 850px
   text-align right
 
+h4
+  font-size 12px
+
+pre
+code
+  font-family font-family--monospace
+
 hr
   &.vertical
     position relative
@@ -62,6 +71,26 @@ hr
   &.menu-top
   &.menu-bottom
     margin-top 0
+
+.quotes
+  margin 0 auto
+  max-width 500px
+  text-align center
+
+.quotes
+.quote
+.quote-value
+.quote-author
+  align-items center
+  display flex
+  flex-direction column
+  flex 1
+
+.quote-value
+  font-weight 200
+
+.quote-author
+  margin-right 2rem
 
 blockquote
   margin-right 5rem
@@ -81,6 +110,14 @@ menu
   position relative
   width 800px
 
+  .index
+  .menuitem a
+    color palette--blue
+
+  .index-incomplete
+  .menuitem-incomplete a
+    color #ccc !important
+
   ul
     list-style none
     float left
@@ -95,20 +132,26 @@ menu
       opacity .5
       position absolute
 
-  li:nth-child(2)
-    font-weight bold
-    a
-      color palette--blue
-      &:focus
-        outline 0
-      &:before
-        content '᚛'
-        left -15px
-        opacity .25
-        position absolute
-        transition-property color
-        transition-duration 150ms
-        transition-timing-function linear
+  .menuitem
+    &-incomplete:hover a
+      text-decoration none
+      cursor default
+
+    &:nth-child(2)
+
+      font-weight bold
+      a
+        color palette--blue
+        &:focus
+          outline 0
+        &:before
+          content '᚛'
+          left -15px
+          opacity .25
+          position absolute
+          transition-property color
+          transition-duration 150ms
+          transition-timing-function linear
 
 //- section stylus
 
@@ -138,6 +181,9 @@ create-label(sel, label, color)
   .{sel}
     color lighten(desaturate(color, 50%), 25%)
     margin 20px 0
+    a
+      color darken(color, 20%)
+
     &:before
       content label
       color color
@@ -149,11 +195,20 @@ create-label('WARNING', 'Warning', orange)
 .filetree-content .inner pre
 code.block-wide
 code.block
+code.lang-sh
   display inline-block
   margin-top 25px
   margin-bottom 45px
   margin-left 25%
   white-space pre-line
+
+code.lang-shell
+.filetree-content pre
+  white-space pre-wrap
+
+code.short
+  @extends code.block
+  margin-left 0
 
 code.block-wide
   width 700px
@@ -186,28 +241,28 @@ code.block-wide
   .line
   .text
     float left
-    height 1.5rem
-    line-height 1.5rem
+    height 1.25rem
+    line-height 1.25rem
     &-checkbox
       float left
 
 .filetree-help
-  float right
   color #aaa
-  margin-top calc(50% - 100px)
+  float right
+  margin-top 25%
+  right 100px
   text-align center
   &.hidden
     display none
 
-.filetree-help
 .filetree-content
-  margin-left 50px
   width 400px
 
 .filetree-content
   .inner
     display none
     margin-bottom 20px
+    margin-left 25px
     position relative
     top 0
     &.active
@@ -232,18 +287,25 @@ code.block-wide
 .grouping-single
 .text-code
   cursor pointer
-  .build &
-    color red
-  .boilerplate &
-    color purple
+  /.raw-file.configuration
   .configuration &
     color yellow
+  /.raw-file.build
+  .build &
+    color red
+  /.raw-file.boilderplate
+  .boilerplate &
+    color purple
+  /.raw-file.markup
   .markup &
     color green
+  /.raw-file.javascript
   .javascript &
     color blue
+  /.raw-file.styles
   .styles &
     color orange
+  /.raw-file.view
   .view &
     color magenta
 
@@ -264,9 +326,31 @@ code.block-wide
   span
     cursor text
 
+.raw-title
+  color
+.raw-file
+  box-sizing border-box
+  margin-bottom 20px
+  margin-left -20px
+  margin-right -15px
+  padding 10px
+  white-space pre-wrap
+  border-width 1px
+  border-style solid
+
+img
+  max-width 700px
+
+.appendix-section
+  li p:first-child
+    margin-bottom 0
+
 _line = 17px
 for n in 1 2 3 4 5 6 7 8 9
   .parent-{n}
-    height unit(n * 1.5, 'rem')
+    height unit(n * 1.25, 'rem')
     .grouping-single
-      line-height unit(n * 1.5, 'rem')
+      line-height unit(n * 1.25, 'rem')
+
+a:active
+  outline 0
