@@ -15,6 +15,10 @@ font-size--base  = 11px
 font-family--monospace = 'source-code-pro'
 font-family--sans-serif = 'source-code-pro', 'Helvetica Neue', sans-serif
 
+//- ignored aglet files
+
+aglet--require-font-icon = false
+
 //- dependencies
 
 @require './node_modules/shoelace-ui-aglet'
@@ -220,7 +224,7 @@ code.block-wide
 .filetree
   display inline-block
   margin-top 50px
-  margin-bottom @margin-top
+  // margin-bottom @margin-top
   &-help
   &-code
   &-content
@@ -249,7 +253,7 @@ code.block-wide
 .filetree-help
   color #aaa
   float right
-  margin-top 25%
+  margin-top 100px
   right 100px
   text-align center
   &.hidden
@@ -320,6 +324,7 @@ code.block-wide
     font-weight normal
     margin-bottom 0
     margin-top 0
+    margin-right 50px
     position absolute
     right 200px
     text-align right

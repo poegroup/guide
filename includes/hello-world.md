@@ -1,22 +1,21 @@
-Start by opening your terminal and install a command line utility for generating new Poe UI apps.
+Start by opening your terminal and installing the [poe](https://github.com/poegroup/poe) command line tool.
 
 <code class='block'>
-npm install --global poe-ui
+npm i --g poe
 </code>
 
 After install finishes, navigate to an empty directory somewhere. This will be our app's root.
 
-<code class='block'>
+```sh
 mkdir ~/Projects/foo-bar
 cd ~/Projects/foo-bar
-poe-ui-create
-</code>
+poe create ui
+```
 
-At this point you'll be prompted to give your app a name, and optional description and organization. Once
-everything has been created, you can start the app by running
+At this point you'll be prompted for a project name, description, and any other required fields.
+Once instantiated, you can start the app by running
 
 ```sh
-npm install
 make start
 ```
 
@@ -30,7 +29,7 @@ After a moment to install dependencies, our output should look something like th
 
 ```sh
 14:38:42 web.1   | started with pid 44663
-14:38:42 web.1   | [LR] auto-reload enabled
+14:38:42 web.1   |    info : auto-reload enabled
 14:38:42 web.1   | Server listening on port 5000
 ```
 
@@ -39,7 +38,6 @@ This log style may look familiar to you; we are using **[foreman](https://github
 run on your machine exactly as it does in production.
 </div>
 
-This means the app is up an running. So now if we navigate in our browser to `localhost:5000`, we can see the
-default initialized app ready for us.
+It says it's listening, so let's navigate in our browser to `localhost:5000`.
 
-![Alt text](/img/new-app.png)
+![A newly initialied Poe UI app](http://i.imgur.com/5KCbNbZ.png)

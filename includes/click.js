@@ -1,3 +1,4 @@
+var REVEAL_TIME = 2000;
 
 var fileContent = document.createElement('div');
 fileContent.className = 'filetree-content';
@@ -51,7 +52,7 @@ arr.forEach(function(line, idx){
 
   function reset() {
     clear();
-    timeout = window.setTimeout(reveal, 5000);
+    timeout = window.setTimeout(reveal, REVEAL_TIME);
   }
 
   function reveal() {

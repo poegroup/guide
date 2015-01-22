@@ -3,11 +3,9 @@ p Let's start by exploring how the project is organized. Here is our current pro
 
 .filetree
   .filetree-help
-    p Hover over a file see more information.
-    p Click a file to toggle the information on/off.
+    include:md filetree-help.md
 
   .filetree-code
-
     mixin line(indent, text, classes, ignored)
       .line.file(class=classes)
         code.indent=indent
@@ -25,7 +23,7 @@ p Let's start by exploring how the project is organized. Here is our current pro
     mixin grouping(text, classes)
       .grouping(class=classes)
         - var proper = text[0].toUpperCase() + text.slice(1)
-        h3.grouping-single: span= proper
+        .grouping-single= proper
         block
 
     +grouping("configuration", ["parent-3 configuration"])
@@ -38,21 +36,21 @@ p Let's start by exploring how the project is organized. Here is our current pro
       +line("|-- ", "Procfile.dev", ["boilerplate"]): include:md files/Procfile.md
       +line("|-- ", "app.js", ["boilerplate"]): include:md files/app.js.md
 
-    +grouping("build", ["parent-6 build"])
-      +line("|-- ", "build", ["build"]): include:md files/build
-      +line("|   |-- ", "app.js", ["build"])
-      +line("|   |-- ", "require.js", ["build"])
-      +line("|   |-- ", "script.js", ["build"])
-      +line("|   |-- ", "style.css", ["build"])
-      +line("|   `-- ", "vendor.js", ["build"])
+      //- +grouping("build", ["parent-6 build"])
+      //-   +line("|-- ", "build", ["build"]): include:md files/build
+      //-   +line("|   |-- ", "app.js", ["build"])
+      //-   +line("|   |-- ", "require.js", ["build"])
+      //-   +line("|   |-- ", "script.js", ["build"])
+      //-   +line("|   |-- ", "style.css", ["build"])
+      //-    +line("|   `-- ", "vendor.js", ["build"])
 
     +grouping("  ", ["parent-1"])
       +line("|-- ", "public", [], true)
 
     +grouping("javascript", ["parent-3 javascript"])
       +line("|   |-- ", "javascripts")
-      +line("|   |   |-- ", "index.js")
-      +line("|   |   `-- ", "routes.js")
+      +line("|   |   |-- ", "index.js"): include:md files/index.js.md
+      +line("|   |   `-- ", "routes.js"): include:md files/routes.js.md
 
     +grouping("partials", ["parent-3 partials"])
       +line("|   |-- ", "partials", ["markup"]): include:md files/partials.md

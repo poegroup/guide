@@ -1,5 +1,4 @@
-Procfile are used by the Heroku platform, and this file is referenced by foreman
-at startup. Generally, this file does not need to be touched.
+Heroku's `foreman` references this. Generally, it does not need to be touched.
 
 [More information](https://devcenter.heroku.com/articles/procfile)
 

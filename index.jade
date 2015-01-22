@@ -68,13 +68,10 @@ block menu
 
   hr.menu-bottom
 
-  - var quoteN = 1
   .quotes
-    each quote, i in locals.quotes
-      if i < quoteN
-        .quote
-          blockquote.quote-value= quote[':c']
-          strong.quote-author= quote[':a']
+    .quote
+      blockquote.quote-value
+      strong.quote-author
 
 block content
 
@@ -107,3 +104,5 @@ block content
 
   script
     include includes/click.js
+  style
+    include:styl index.styl
