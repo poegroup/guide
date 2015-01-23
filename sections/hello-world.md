@@ -6,11 +6,11 @@ npm i --g poe
 
 After install finishes, navigate to an empty directory somewhere. This will be our app's root.
 
-```sh
+<code class='block'>
 mkdir ~/Projects/foo-bar
 cd ~/Projects/foo-bar
 poe create ui
-```
+</code>
 
 At this point you'll be prompted for a project name, description, and any other required fields.
 Once instantiated, you can start the app by running

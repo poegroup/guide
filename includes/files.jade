@@ -1,9 +1,11 @@
 
 p Let's start by exploring how the project is organized. Here is our current project's tree:
 
+
 .filetree
+
   .filetree-help
-    include:md filetree-help.md
+    include:md ../sections/filetree-help.md
 
   .filetree-code
     mixin line(indent, text, classes, ignored)
@@ -27,33 +29,25 @@ p Let's start by exploring how the project is organized. Here is our current pro
         block
 
     +grouping("configuration", ["parent-3 configuration"])
-      +line("|-- ", ".env", ["configuration"]): include:md files/.env.md
-      +line("|-- ", "package.json", ["configuration"]): include:md files/package.json.md
-      +line("|-- ", "component.json", ["configuration show"]): include:md files/component.json.md
+      +line("|-- ", ".env", ["configuration"]): include:md ../files/.env.md
+      +line("|-- ", "package.json", ["configuration"]): include:md ../files/package.json.md
+      +line("|-- ", "component.json", ["configuration show"]): include:md ../files/component.json.md
 
     +grouping("boilerplate", ["parent-3 boilerplate"])
-      +line("|-- ", "Makefile", ["boilerplate"]): include:md files/Makefile.md
-      +line("|-- ", "Procfile.dev", ["boilerplate"]): include:md files/Procfile.md
-      +line("|-- ", "app.js", ["boilerplate"]): include:md files/app.js.md
-
-      //- +grouping("build", ["parent-6 build"])
-      //-   +line("|-- ", "build", ["build"]): include:md files/build
-      //-   +line("|   |-- ", "app.js", ["build"])
-      //-   +line("|   |-- ", "require.js", ["build"])
-      //-   +line("|   |-- ", "script.js", ["build"])
-      //-   +line("|   |-- ", "style.css", ["build"])
-      //-    +line("|   `-- ", "vendor.js", ["build"])
+      +line("|-- ", "Makefile", ["boilerplate"]): include:md ../files/Makefile.md
+      +line("|-- ", "Procfile.dev", ["boilerplate"]): include:md ../files/Procfile.md
+      +line("|-- ", "app.js", ["boilerplate"]): include:md ../files/app.js.md
 
     +grouping("  ", ["parent-1"])
       +line("|-- ", "public", [], true)
 
     +grouping("javascript", ["parent-3 javascript"])
       +line("|   |-- ", "javascripts")
-      +line("|   |   |-- ", "index.js"): include:md files/index.js.md
-      +line("|   |   `-- ", "routes.js"): include:md files/routes.js.md
+      +line("|   |   |-- ", "index.js"): include:md ../files/index.js.md
+      +line("|   |   `-- ", "routes.js"): include:md ../files/routes.js.md
 
     +grouping("partials", ["parent-3 partials"])
-      +line("|   |-- ", "partials", ["markup"]): include:md files/partials.md
+      +line("|   |-- ", "partials", ["markup"]): include:md ../files/partials.md
       +line("|   |   |-- ", "header.jade", ["markup"])
       +line("|   |   `-- ", "index.jade", ["markup"])
 

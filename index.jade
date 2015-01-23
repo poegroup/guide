@@ -23,14 +23,14 @@ block menu
       +listitem('Overview', 'complete')
       +listitem('Getting Started', 'complete')
       +listitem('Hello World', 'complete')
-      +listitem('Structure', 'complete')
 
     +list()
-      +listitem('Todo App')
-      +listitem('Requirement', 'incomplete')
-      +listitem('Front-Ends', 'incomplete')
-      +listitem('Contracts', 'incomplete')
-      +listitem('Systems', 'incomplete')
+      +listitem('Basic UI App')
+      +listitem('Structure', 'complete')
+      // +listitem('Requirement', 'incomplete')
+      // +listitem('Front-Ends', 'incomplete')
+      // +listitem('Contracts', 'incomplete')
+      // +listitem('Systems', 'incomplete')
 
     +list('incomplete')
       +listitem('In the Browser', 'incomplete')
@@ -89,9 +89,11 @@ block content
       block
 
   +section('Introduction')
-    +subsection('Overview'): include:md includes/overview.md
-    +subsection('Getting Started'): include:md includes/getting-started.md
-    +subsection('Hello World'): include:md includes/hello-world.md
+    +subsection('Overview'): include:md sections/overview.md
+    +subsection('Getting Started'): include:md sections/getting-started.md
+    +subsection('Hello World'): include:md sections/hello-world.md
+
+  +section('Basic UI App')
     +subsection('Structure'): include includes/files
 
   //- +section('Front-End')
@@ -99,8 +101,8 @@ block content
   //-   +subsection('Stylus')
 
   +section('Appendix')
-    +subsection('Organizations'): include:md includes/organizations.md
-    +subsection('Resources'): include:md includes/resources.md
+    +subsection('Organizations'): include:md sections/organizations.md
+    +subsection('Resources'): include:md sections/resources.md
 
   script
-    include includes/click.js
+    include scripts/click.js

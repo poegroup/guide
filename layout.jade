@@ -2,7 +2,8 @@ doctype html
 html
   head
     title Poe Guide
-    style: include:styl index.styl
+    // style: include:styl styles/index.styl
+    link(type="text/css" rel="stylesheet" href="styles/index.css")
     script(src="//use.typekit.net/ldo1umf.js")
     script try{Typekit.load();}catch(e){}
     script (function(d) {var config = {kitId: 'ldo1umf', scriptTimeout: 3000}, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);
@@ -14,4 +15,4 @@ html
 
   script
    !='window.quotes = ' + JSON.stringify(locals.quotes) + ';'
-   include includes/random-quote.js
+   include scripts/random-quote.js
