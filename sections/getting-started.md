@@ -5,5 +5,6 @@ focussing on the very highest level features.
 Now, to kick things off, we will need [node.js]("http://nodejs.org/"), so install if necessary.
 
 <div class='NOTE'>
-If you're on OS X, it's better to install node via **[homebrew](http://brew.sh)** or use TJ Holowaychuck's .
+If you're on OS X, it's better to install node via **[homebrew](http://brew.sh)** or
+use TJ Holowaychuck's **[n](http://github.com/tj/n)**.
 </div>

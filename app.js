@@ -16,14 +16,13 @@ var quotes = require('./pretty.json');
 
 // local files as strings
 var locals = {
-  // 'quotes': require('./pretty.json'),
   '.env': require('./raw/.env')(),
   '.foreman': require('./raw/.foreman')(),
   'Makefile': require('./raw/Makefile')(),
   'Procfile.dev': require('./raw/Procfile.dev')(),
   'app.js': require('./raw/app.js')(),
   'header.jade': require('./raw/public/partials/header.jade')(),
-  'index.jade': require('./raw/public/partials/index.jade')(),
+  'index.jade': require('./raw/views/index.jade')(),
   'index.js': require('./raw/public/javascripts/index.js')(),
   'index.styl': require('./raw/public/stylesheets/index.styl')(),
   'routes.js': require('./raw/public/javascripts/routes.js')(),

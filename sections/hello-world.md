@@ -1,18 +1,19 @@
 Start by opening your terminal and installing the [poe](https://github.com/poegroup/poe) command line tool.
 
 <code class='block'>
-npm i --g poe
+npm i -g poe
 </code>
 
 After install finishes, navigate to an empty directory somewhere. This will be our app's root.
 
 <code class='block'>
-mkdir ~/Projects/foo-bar
-cd ~/Projects/foo-bar
+mkdir ~/Projects/my-app
+cd ~/Projects/my-app
 poe create ui
 </code>
 
 At this point you'll be prompted for a project name, description, and any other required fields.
+Set the `port` field to 5000, and the `api url` to `http://localhost:5001`.
 Once instantiated, you can start the app by running
 
 ```sh
@@ -40,4 +41,6 @@ run on your machine exactly as it does in production.
 
 It says it's listening, so let's navigate in our browser to `localhost:5000`.
 
-![A newly initialied Poe UI app](http://i.imgur.com/5KCbNbZ.png)
+![A newly initialied Poe UI app](img/new-app.png)
+
+Great! We've got a running app.
