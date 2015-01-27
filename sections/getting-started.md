@@ -2,12 +2,10 @@ First off, this tutorial assumes a basic familiarity with the terminal, JS/HTML/
 As new concepts are introduced, please check out the resources we provide and revisit as necessary. We will be
 focussing on the very highest level features.
 
-Now, to kick things off, we will need [node.js]("http://nodejs.org/"), so install if necessary.
+Now, to kick things off, we will need [node.js]("http://nodejs.org/"), so install if you need to.
 
-Since we'll need [foreman](https://github.com/ddollar/foreman) as well, you might as well install it too while
+We'll need [foreman](https://github.com/ddollar/foreman) as well, you might as well install it too while
 you're at it.
-
-
 
 <div class='NOTE'>
 <p>

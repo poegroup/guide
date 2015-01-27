@@ -12,7 +12,7 @@ After install finishes, navigate to an empty directory somewhere. This will be o
     poe create ui
 
 At this point you'll be prompted for a project name, description, etc.
-Let's use the following values for out project:
+Let's use the following values for our project:
 
     project: todo-ui
     description: todo user interface

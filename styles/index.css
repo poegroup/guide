@@ -563,7 +563,6 @@ p code {
   border: 1px solid #dbdfe3;
   padding: 0 4px;
 }
-.filetree-content .inner pre,
 code.block-wide,
 code.block,
 code.lang-sh,
@@ -576,9 +575,8 @@ code.short {
   margin: 2rem auto;
   white-space: pre-wrap;
 }
-code.lang-shell,
-.filetree-content pre {
-  white-space: pre-wrap;
+.filetree-content pre code {
+  background: transparent;
 }
 code.short {
   margin-left: 0;
