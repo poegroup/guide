@@ -34,10 +34,9 @@ block menu
     +list()
       +listitem('Basic API')
       +listitem('Initializing', 'complete')
-      +listitem('Other stuff', 'incomplete')
-      +listitem('Other stuff', 'incomplete')
-      +listitem('Other stuff', 'incomplete')
-      // +listitem('Requirement', 'incomplete')
+      +listitem('Login', 'complete')
+      +listitem('Mongoose', 'complete')
+      +listitem('Wiring Up', 'incomplete')
       // +listitem('Front-Ends', 'incomplete')
       // +listitem('Contracts', 'incomplete')
       // +listitem('Systems', 'incomplete')
@@ -104,10 +103,8 @@ block content
 
   +section('Basic API')
     +subsection('Initializing'): include:md sections/api-initializing.md
-
-  //- +section('Front-End')
-  //-   +subsection('Jade')
-  //-   +subsection('Stylus')
+    +subsection('Login'): include:md sections/api-login.md
+    +subsection('Mongoose'): include:md sections/api-mongoose.md
 
   +section('Appendix')
     +subsection('Organizations'): include:md sections/organizations.md
