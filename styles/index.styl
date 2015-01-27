@@ -9,6 +9,12 @@ a--hover-color     = inherit
 a--visited-color   = inherit
 hr--border         = lighten(blue, 80%)
 
+//- gray vars
+
+gray--light    = desaturate(lighten(palette--gray-base, 70%), 60%)
+gray--lighter  = desaturate(lighten(palette--gray-base, 80%), 60%)
+gray--lightest = desaturate(lighten(palette--gray-base, 90%), 60%)
+
 //- font vars
 
 font-size--base  = 11px
@@ -159,15 +165,6 @@ menu
 
 //- section stylus
 
-section
-  box-sizing border-box
-  padding-left 200px
-  padding-right 100px
-
-  .subsection
-    position relative
-    margin-bottom 60px
-
 $side-header
   font-weight bold
   margin-right 50px
@@ -176,10 +173,22 @@ $side-header
   right 700px
   text-align right
 
-section h3
-  top 0
-  font-size 12px
-  @extends $side-header
+section
+  box-sizing border-box
+  padding-left 200px
+  padding-right 100px
+
+  .subsection
+    position relative
+    margin-bottom 2rem
+
+  a
+    font-weight bold
+
+  h3
+    top 0
+    font-size 12px
+    @extends $side-header
 
 create-label(sel, label, color)
   .{sel}
@@ -192,19 +201,31 @@ create-label(sel, label, color)
       content label
       color color
       @extends $side-header
+    pre > code
+      background-color rgba(color, .05)
+      padding-top 1rem
+    pre > code,
+    p code
+      border-color rgba(color, .25)
 
 create-label('NOTE', 'Note', yellow)
 create-label('WARNING', 'Warning', orange)
+
+p code
+  border 1px solid gray--lighter
+  padding 0 4px
 
 .filetree-content .inner pre
 code.block-wide
 code.block
 code.lang-sh
-  display inline-block
-  margin-top 25px
-  margin-bottom 45px
-  margin-left 25%
-  white-space pre-line
+pre code
+  background gray--lightest
+  border 1px solid gray--lighter
+  display block
+  padding 2rem
+  margin 2rem auto
+  white-space pre-wrap
 
 code.lang-shell
 .filetree-content pre
@@ -224,7 +245,6 @@ code.block-wide
 .filetree
   display inline-block
   margin-top 50px
-  // margin-bottom @margin-top
   &-help
   &-code
   &-content
@@ -275,6 +295,12 @@ code.block-wide
         margin-top 20px
         padding-top 20px
         border-top 1px solid #ddd
+
+  .NOTE:before
+    position: relative
+    margin-right: 0
+    left: 0
+
 
 .text-code
   &.ignored

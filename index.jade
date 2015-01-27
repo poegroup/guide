@@ -28,17 +28,19 @@ block menu
       +listitem('Basic UI')
       +listitem('Structure', 'complete')
       +listitem('Markup', 'complete')
+      +listitem('Styles', 'complete')
+      +listitem('Routes', 'complete')
+
+    +list()
+      +listitem('Basic API')
+      +listitem('Initializing', 'complete')
+      +listitem('Other stuff', 'incomplete')
+      +listitem('Other stuff', 'incomplete')
+      +listitem('Other stuff', 'incomplete')
       // +listitem('Requirement', 'incomplete')
       // +listitem('Front-Ends', 'incomplete')
       // +listitem('Contracts', 'incomplete')
       // +listitem('Systems', 'incomplete')
-
-    +list('incomplete')
-      +listitem('In the Browser', 'incomplete')
-      +listitem('Markup', 'incomplete')
-      +listitem('Stylesheets', 'incomplete')
-      +listitem('Javascript', 'incomplete')
-      +listitem('A Static Site', 'incomplete')
 
     +list('incomplete')
       +listitem('Client Hypermedia', 'incomplete')
@@ -97,6 +99,11 @@ block content
   +section('Basic UI')
     +subsection('Structure'): include includes/files
     +subsection('Markup'): include:md sections/markup.md
+    +subsection('Styles'): include:md sections/styles.md
+    +subsection('Routes'): include:md sections/routes.md
+
+  +section('Basic API')
+    +subsection('Initializing'): include:md sections/api-initializing.md
 
   //- +section('Front-End')
   //-   +subsection('Jade')

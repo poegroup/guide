@@ -4,7 +4,20 @@ focussing on the very highest level features.
 
 Now, to kick things off, we will need [node.js]("http://nodejs.org/"), so install if necessary.
 
+Since we'll need [foreman](https://github.com/ddollar/foreman) as well, you might as well install it too while
+you're at it.
+
+
+
 <div class='NOTE'>
-If you're on OS X, it's better to install node via **[homebrew](http://brew.sh)** or
-use TJ Holowaychuck's **[n](http://github.com/tj/n)**.
+<p>
+If you're on OS X, it's better to install node via [homebrew](http://brew.sh) or
+use TJ Holowaychuck's [n](http://github.com/tj/n).
+</p>
+<p>
+Here's a one-liner to quickly install `n`:
+<pre><code>
+(git clone https://github.com/tj/n.git /tmp/_n_ && cd /tmp/_n_ && make && n stable)
+</code></pre>
+</p>
 </div>

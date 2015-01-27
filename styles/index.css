@@ -239,7 +239,7 @@ fieldset[disabled] input[type="text"],
 fieldset[disabled] select,
 fieldset[disabled] textarea {
   cursor: not-allowed;
-  background-color: #93a1a1;
+  background-color: #dbdfe3;
 }
 input[type="text"]:focus,
 select:focus,
@@ -493,17 +493,6 @@ menu .menuitem:nth-child(2) a:before {
   -ms-transition-timing-function: linear;
   transition-timing-function: linear;
 }
-section {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 200px;
-  padding-right: 100px;
-}
-section .subsection {
-  position: relative;
-  margin-bottom: 60px;
-}
 section h3,
 .NOTE:before,
 .WARNING:before {
@@ -513,6 +502,20 @@ section h3,
   position: absolute;
   right: 700px;
   text-align: right;
+}
+section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 200px;
+  padding-right: 100px;
+}
+section .subsection {
+  position: relative;
+  margin-bottom: 2rem;
+}
+section a {
+  font-weight: bold;
 }
 section h3 {
   top: 0;
@@ -529,6 +532,14 @@ section h3 {
   content: 'Note';
   color: #b58900;
 }
+.NOTE pre > code {
+  background-color: rgba(181,137,0,0.05);
+  padding-top: 1rem;
+}
+.NOTE pre > code,
+.NOTE p code {
+  border-color: rgba(181,137,0,0.25);
+}
 .WARNING {
   color: #bf8369;
   margin: 20px 0;
@@ -540,16 +551,30 @@ section h3 {
   content: 'Warning';
   color: #cb4b16;
 }
+.WARNING pre > code {
+  background-color: rgba(203,75,22,0.05);
+  padding-top: 1rem;
+}
+.WARNING pre > code,
+.WARNING p code {
+  border-color: rgba(203,75,22,0.25);
+}
+p code {
+  border: 1px solid #dbdfe3;
+  padding: 0 4px;
+}
 .filetree-content .inner pre,
 code.block-wide,
 code.block,
 code.lang-sh,
+pre code,
 code.short {
-  display: inline-block;
-  margin-top: 25px;
-  margin-bottom: 45px;
-  margin-left: 25%;
-  white-space: pre-line;
+  background: #edeff0;
+  border: 1px solid #dbdfe3;
+  display: block;
+  padding: 2rem;
+  margin: 2rem auto;
+  white-space: pre-wrap;
 }
 code.lang-shell,
 .filetree-content pre {
@@ -625,6 +650,11 @@ code.block-wide {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid #ddd;
+}
+.filetree-content .NOTE:before {
+  position: relative;
+  margin-right: 0;
+  left: 0;
 }
 .text-code.ignored {
   cursor: default !important;

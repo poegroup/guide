@@ -1,53 +1,72 @@
-<!DOCTYPE html><html><head><title>Poe Guide</title><!-- style: include:styl styles/index.styl--><link type="text/css" rel="stylesheet" href="styles/index.css"><script src="//use.typekit.net/ldo1umf.js"></script><script>try{Typekit.load();}catch(e){}</script><script>(function(d) {var config = {kitId: 'ldo1umf', scriptTimeout: 3000}, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script></head><body><main><h1><span>Poe Guide</span></h1><hr class="menu-top"><menu><ul><li class="index index-complete">1</li><li class="menuitem menuitem-complete"><a href="#introduction">Introduction</a></li><li class="menuitem menuitem-complete"><a href="#overview">Overview</a></li><li class="menuitem menuitem-complete"><a href="#getting-started">Getting Started</a></li><li class="menuitem menuitem-complete"><a href="#hello-world">Hello World</a></li></ul><ul><li class="index index-undefined">2</li><li class="menuitem menuitem-undefined"><a href="#basic-ui">Basic UI</a></li><li class="menuitem menuitem-complete"><a href="#structure">Structure</a></li><li class="menuitem menuitem-complete"><a href="#markup">Markup</a></li><!-- +listitem('Requirement', 'incomplete')--><!-- +listitem('Front-Ends', 'incomplete')--><!-- +listitem('Contracts', 'incomplete')--><!-- +listitem('Systems', 'incomplete')--></ul><ul><li class="index index-incomplete">3</li><li class="menuitem menuitem-incomplete"><a href="#in-the-browser">In the Browser</a></li><li class="menuitem menuitem-incomplete"><a href="#markup">Markup</a></li><li class="menuitem menuitem-incomplete"><a href="#stylesheets">Stylesheets</a></li><li class="menuitem menuitem-incomplete"><a href="#javascript">Javascript</a></li><li class="menuitem menuitem-incomplete"><a href="#a-static-site">A Static Site</a></li></ul><ul><li class="index index-incomplete">4</li><li class="menuitem menuitem-incomplete"><a href="#client-hypermedia">Client Hypermedia</a></li><li class="menuitem menuitem-incomplete"><a href="#data-binding">Data Binding</a></li><li class="menuitem menuitem-incomplete"><a href="#forms">Forms</a></li><li class="menuitem menuitem-incomplete"><a href="#composition">Composition</a></li><li class="menuitem menuitem-incomplete"><a href="#a-front-end">A Front End</a></li></ul><ul><li class="index index-incomplete">5</li><li class="menuitem menuitem-incomplete"><a href="#api-design">API Design</a></li><li class="menuitem menuitem-incomplete"><a href="#hypermedia">Hypermedia</a></li><li class="menuitem menuitem-incomplete"><a href="#specs-and-standards">Specs and Standards</a></li><li class="menuitem menuitem-incomplete"><a href="#a-mock-api">A Mock API</a></li></ul><ul><li class="index index-undefined">6</li><li class="menuitem menuitem-undefined"><a href="#appendix">Appendix</a></li><li class="menuitem menuitem-undefined"><a href="#organizations">Organizations</a></li><li class="menuitem menuitem-undefined"><a href="#resources">Resources</a></li><li class="menuitem menuitem-incomplete"><a href="#credits">Credits</a></li><li class="menuitem menuitem-incomplete"><a href="#license">License</a></li></ul></menu><hr class="menu-bottom"><div class="quotes"><div class="quote"><blockquote class="quote-value"></blockquote><strong class="quote-author"></strong></div></div><h2 id="introduction">Introduction</h2><section id="introduction-section" class="introduction-section"><div id="overview" class="subsection"><h3>Overview</h3><p>  Poe is a collection of open-source tools for web developers, and Poe UI is its front-end framework.</p>
+<!DOCTYPE html><html><head><title>Poe Guide</title><!-- style: include:styl styles/index.styl--><link type="text/css" rel="stylesheet" href="styles/index.css"><script src="//use.typekit.net/ldo1umf.js"></script><script>try{Typekit.load();}catch(e){}</script><script>(function(d) {var config = {kitId: 'ldo1umf', scriptTimeout: 3000}, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script></head><body><main><h1><span>Poe Guide</span></h1><hr class="menu-top"><menu><ul><li class="index index-complete">1</li><li class="menuitem menuitem-complete"><a href="#introduction">Introduction</a></li><li class="menuitem menuitem-complete"><a href="#overview">Overview</a></li><li class="menuitem menuitem-complete"><a href="#getting-started">Getting Started</a></li><li class="menuitem menuitem-complete"><a href="#hello-world">Hello World</a></li></ul><ul><li class="index index-undefined">2</li><li class="menuitem menuitem-undefined"><a href="#basic-ui">Basic UI</a></li><li class="menuitem menuitem-complete"><a href="#structure">Structure</a></li><li class="menuitem menuitem-complete"><a href="#markup">Markup</a></li><li class="menuitem menuitem-complete"><a href="#styles">Styles</a></li><li class="menuitem menuitem-complete"><a href="#routes">Routes</a></li></ul><ul><li class="index index-undefined">3</li><li class="menuitem menuitem-undefined"><a href="#basic-api">Basic API</a></li><li class="menuitem menuitem-complete"><a href="#initializing">Initializing</a></li><li class="menuitem menuitem-incomplete"><a href="#other-stuff">Other stuff</a></li><li class="menuitem menuitem-incomplete"><a href="#other-stuff">Other stuff</a></li><li class="menuitem menuitem-incomplete"><a href="#other-stuff">Other stuff</a></li><!-- +listitem('Requirement', 'incomplete')--><!-- +listitem('Front-Ends', 'incomplete')--><!-- +listitem('Contracts', 'incomplete')--><!-- +listitem('Systems', 'incomplete')--></ul><ul><li class="index index-incomplete">4</li><li class="menuitem menuitem-incomplete"><a href="#client-hypermedia">Client Hypermedia</a></li><li class="menuitem menuitem-incomplete"><a href="#data-binding">Data Binding</a></li><li class="menuitem menuitem-incomplete"><a href="#forms">Forms</a></li><li class="menuitem menuitem-incomplete"><a href="#composition">Composition</a></li><li class="menuitem menuitem-incomplete"><a href="#a-front-end">A Front End</a></li></ul><ul><li class="index index-incomplete">5</li><li class="menuitem menuitem-incomplete"><a href="#api-design">API Design</a></li><li class="menuitem menuitem-incomplete"><a href="#hypermedia">Hypermedia</a></li><li class="menuitem menuitem-incomplete"><a href="#specs-and-standards">Specs and Standards</a></li><li class="menuitem menuitem-incomplete"><a href="#a-mock-api">A Mock API</a></li></ul><ul><li class="index index-undefined">6</li><li class="menuitem menuitem-undefined"><a href="#appendix">Appendix</a></li><li class="menuitem menuitem-undefined"><a href="#organizations">Organizations</a></li><li class="menuitem menuitem-undefined"><a href="#resources">Resources</a></li><li class="menuitem menuitem-incomplete"><a href="#credits">Credits</a></li><li class="menuitem menuitem-incomplete"><a href="#license">License</a></li></ul></menu><hr class="menu-bottom"><div class="quotes"><div class="quote"><blockquote class="quote-value"></blockquote><strong class="quote-author"></strong></div></div><h2 id="introduction">Introduction</h2><section id="introduction-section" class="introduction-section"><div id="overview" class="subsection"><h3>Overview</h3><p>  Poe is a collection of open-source tools for web developers, and Poe UI is its front-end framework.</p>
 <p>  Let&#39;s start with the basics by generating a skeleton Poe UI app locally.</p>
 </div><div id="getting-started" class="subsection"><h3>Getting Started</h3><p>First off, this tutorial assumes a basic familiarity with the terminal, JS/HTML/CSS, and an editor of some kind.
 As new concepts are introduced, please check out the resources we provide and revisit as necessary. We will be
 focussing on the very highest level features.</p>
 <p>Now, to kick things off, we will need <a href="&quot;http://nodejs.org/&quot;">node.js</a>, so install if necessary.</p>
+<p>Since we&#39;ll need <a href="https://github.com/ddollar/foreman">foreman</a> as well, you might as well install it too while
+you&#39;re at it.</p>
 <div class='NOTE'>
-If you&#39;re on OS X, it&#39;s better to install node via <strong><a href="http://brew.sh">homebrew</a></strong> or
-use TJ Holowaychuck&#39;s <strong><a href="http://github.com/tj/n">n</a></strong>.
-</div>
-</div><div id="hello-world" class="subsection"><h3>Hello World</h3><p>Start by opening your terminal and installing the <a href="https://github.com/poegroup/poe">poe</a> command line tool.</p>
-<p><code class='block'>
-npm i -g poe
-</code></p>
-<p>After install finishes, navigate to an empty directory somewhere. This will be our app&#39;s root.</p>
-<p><code class='block'>
-mkdir ~/Projects/my-app
-cd ~/Projects/my-app
-poe create ui
-</code></p>
-<p>At this point you&#39;ll be prompted for a project name, description, and any other required fields.
-Set the <code>port</code> field to 5000, and the <code>api url</code> to <code>http://localhost:5001</code>.
-Once instantiated, you can start the app by running</p>
-<pre><code class="lang-sh">make start
+<p>
+If you&#39;re on OS X, it&#39;s better to install node via <a href="http://brew.sh">homebrew</a> or
+use TJ Holowaychuck&#39;s <a href="http://github.com/tj/n">n</a>.
+</p>
+<p>
+Here&#39;s a one-liner to quickly install <code>n</code>:
+<pre><code>
+(git clone <a href="https://github.com/tj/n.git">https://github.com/tj/n.git</a> /tmp/<em>n</em> &amp;&amp; cd /tmp/<em>n</em> &amp;&amp; make &amp;&amp; n stable)
 </code></pre>
-<div class='WARNING'>
+</p>
+</div>
+</div><div id="hello-world" class="subsection"><h3>Hello World</h3><p>In accordance with front-end law, any library that is capable of running a todo list <em>must</em>
+demonstrate a todo list app; so that&#39;s what we&#39;ll do.</p>
+<p>Start by opening your terminal and installing the <a href="https://github.com/poegroup/poe">poe</a> command line tool.</p>
+<pre><code>npm i -g poe
+</code></pre><p>After install finishes, navigate to an empty directory somewhere. This will be our app&#39;s root.</p>
+<pre><code>mkdir ~/Projects/mndvns/todo-ui
+cd ~/Projects/mndvns/todo-ui
+poe create ui
+</code></pre><p>At this point you&#39;ll be prompted for a project name, description, etc.
+Let&#39;s use the following values for out project:</p>
+<pre><code>project: todo-ui
+description: todo user interface
+port: 5000
+api url: http://localhost:5001
+</code></pre><p>It should then ask for a confirmation that resembles</p>
+<pre><code>{
+ &quot;project&quot;: &quot;todo-ui&quot;,
+ &quot;username&quot;: &quot;mndvns&quot;,
+ &quot;email&quot;: &quot;mail@mndvns.com&quot;,
+ &quot;fullname&quot;: &quot;Michael Andrew Vanasse&quot;,
+ &quot;description&quot;: &quot;todo user interface&quot;,
+ &quot;PORT&quot;: &quot;5000&quot;,
+ &quot;API_URL&quot;: &quot;http://localhost:5001&quot;
+}
+</code></pre><p>Agree to proceed, and let it do its thing. Once instantiated, you can start the app by running</p>
+<pre><code>make start
+</code></pre><div class='WARNING'>
 If you receive a warning message, go
 <a href="https://github.com/componentjs/guide/blob/master/component/getting-started.md#setup-authentication">here</a>
 and ensure your github credentials are exposed properly.
 </div>
 
 <p>After a moment to install dependencies, our output should look something like this:</p>
-<pre><code class="lang-sh">14:38:42 web.1   | started with pid 44663
+<pre><code>14:38:42 web.1   | started with pid 44663
 14:38:42 web.1   |    info : auto-reload enabled
 14:38:42 web.1   | Server listening on port 5000
-</code></pre>
-<div class='NOTE'>
+</code></pre><div class='NOTE'>
 This log style may look familiar to you; we are using <strong><a href="https://github.com/ddollar/foreman">foreman</a></strong> to
 run on your machine exactly as it does in production.
 </div>
 
-<p>It says it&#39;s listening, so let&#39;s navigate in our browser to <code>localhost:5000</code>.</p>
+<p>It says it&#39;s listening, so let&#39;s navigate in our browser to <strong><a href="http://localhost:5000" target="_blank">localhost:5000</a></strong>
+and see.</p>
 <p><img src="img/new-app.png" alt="A newly initialied Poe UI app"></p>
 <p>Great! We&#39;ve got a running app.</p>
 </div></section><h2 id="basic-ui">Basic UI</h2><section id="basic-ui-section" class="basic-ui-section"><div id="structure" class="subsection"><h3>Structure</h3><p>Let's start by exploring how the project is organized. Here is our current project's tree:</p><div class="filetree"><div class="filetree-help"><p>Hover over a file see more information.</p>
 <p>Click a file to toggle the information on/off.</p>
 </div><div class="filetree-code"><div class="grouping parent-3 configuration"><div class="grouping-single">Configuration</div><div class="line file configuration"><code class="indent">|-- </code><div class="text"><code class="text-code">.env</code><input type="checkbox" hidden class="text-checkbox"><div class="inner"><div class="raw-file configuration">NODE_ENV=development
-API_URL=https://api.PROJECT.com
-OAUTH_CLIENT_ID=PROJECT
-OAUTH_CLIENT_SECRET=this-is-a-secret
+API_URL=http://localhost:5001
 </div><p>An <code>.env</code> file controls your environment. Unlike other project files, it should not be
 version controlled, as doing so may reveal sensitive information.</p>
 <p>Your environment variables are the most fundamental values to your application, and in your Poe app it will likely
@@ -232,6 +251,155 @@ you edit any files in the app, with the exception of the <code>.env</code> file;
 <em>will</em> require restarting the server.</p>
 <p>The browser should now look like this:</p>
 <p><img src="img/rename.png" alt="New header"></p>
+</div><div id="styles" class="subsection"><h3>Styles</h3><p>Poe uses <a href="http://learnboost.github.io/stylus/">Stylus</a> to preprocess its stylesheets.
+Although Stylus is the most feature-rich CSS preprocessor (compared to LESS and SASS),
+vanilla CSS is still syntactically correct, so you may choose to make use of Stylus&#39;s
+features or not. Up to you. In this tutorial, we will.</p>
+<p>We&#39;ll also use the <strong><a href="https://github.com/shoelace-ui/aglet">aglet</a></strong> framework and
+the <strong><a href="https://github.com/tj/nib">nib</a></strong> helper library. To install, run the following
+in your application root:</p>
+<pre><code>npm i --save shoelace-ui-aglet nib
+</code></pre><p>There we go. We can now <code>@require</code> these from our stylesheet.</p>
+<div class='NOTE'>
+To learn more about <code>@require</code>, check out the <a href="http://learnboost.github.io/stylus/docs/import.html">Stylus documentation</a>.
+</div>
+
+<p>So let&#39;s bring them in and while we&#39;re at it, add some styles. How about we frame our app
+in gray against a white background?</p>
+<p>Open <code>public/stylesheets/index.styl</code> and change</p>
+<pre><code>// define core styles
+
+html
+  font-family sans-serif
+
+body
+body &gt; div
+  height 100%
+  width 100%
+
+body
+  position absolute
+  margin 0
+  text-align center
+  &gt; div
+    display flex
+    flex-direction column
+    justify-content center
+
+h1
+  font-weight 100
+  margin-top 0
+
+a
+  padding 10px
+</code></pre><p>to</p>
+<pre><code>// variables
+
+input--apply-all = true
+
+// dependencies
+
+@require &#39;shoelace-ui-aglet&#39;
+@require &#39;nib&#39;
+
+// core styles
+
+html
+  font-family sans-serif
+  font-size 14px
+
+body
+  height 100%
+  width 100%
+  background rgba(black, .1)
+  position absolute
+  margin 0
+
+body &gt; div
+  background rgba(white .9)
+  box-shadow 0 2px 6px 0 rgba(black, 0.2), 0 5px 50px 0 rgba(black, 0.15)
+  box-sizing border-box
+  display flex
+  flex-direction column
+  max-width 500px
+  padding padding--extra-large
+  margin @padding auto
+  width 100%
+
+h1
+  font-weight 100
+  margin-top 0
+  text-align center
+
+a
+  padding-right 10px
+</code></pre><div class='NOTE'>
+<p>
+If this is the first time you&#39;ve seen the <code>rem</code> unit, you can <strong><a href="http://snook.ca/archives/html_and_css/font-size-with-rem">read about it here</a></strong>.
+</p>
+<p>
+With the <code>@</code> sigil, we&#39;re making use of Stylus&#39;s <strong><a href="http://learnboost.github.io/stylus/docs/variables.html#property-lookup">property lookup</a></strong>
+feature.
+</p>
+<p>
+We&#39;re also using the Stylus builtin <strong><a href="http://learnboost.github.io/stylus/docs/bifs.html#alphacolor-value">rgba</a></strong> to write colors.
+</p>
+</div>
+
+<p>Our Todo app should look like this now:</p>
+<p><img src="img/background.png" alt="New background"></p>
+</div><div id="routes" class="subsection"><h3>Routes</h3><p>So we know how to edit markup and change styles. Now what? So far our app
+is basically a glorified static page.</p>
+<p>Let&#39;s add a login page to see how routing works.</p>
+<p>First, let&#39;s write <code>public/partials/login.jade</code> as</p>
+<pre><code>form
+  input(type=&#39;text&#39; placeholder=&#39;username&#39;)
+  input(type=&#39;password&#39; placeholder=&#39;password&#39;)
+</code></pre><p>And we&#39;ll change <code>public/javascripts/routes.js</code> from</p>
+<pre><code>module.exports = {
+  &#39;/&#39;: &#39;index&#39;
+};
+</code></pre><p>to</p>
+<pre><code>module.exports = {
+  &#39;/&#39;: &#39;index&#39;,
+  &#39;/login&#39;: &#39;login&#39;
+};
+</code></pre><p>The <code>/login</code> key is the path, and the value is the partial to which the
+router should point. In this case, going to <a href="localhost:5000/login">localhost:5000/login</a> should
+show us the form at the <code>login.jade</code> partial. Let&#39;s see:</p>
+<p><img src="img/login.png" alt="Login page"></p>
+<p>Perfect!</p>
+<p>But to create an actual login, we&#39;ll need to set up an API.</p>
+</div></section><h2 id="basic-api">Basic API</h2><section id="basic-api-section" class="basic-api-section"><div id="initializing" class="subsection"><h3>Initializing</h3><p>Let&#39;s navigate to a new directory like we did earlier.</p>
+<pre><code>mkdir -p ~/Projects/mndvns/todo-api
+cd ~/Projects/mndvns/todo-api
+poe create api
+</code></pre><p>Once again, we&#39;re asked to fill some project fields. Let&#39;s use the following values:</p>
+<pre><code>project: todo-api
+description: todo api
+port: 5001
+</code></pre><p>And the confirmation should resemble </p>
+<pre><code>{
+  &quot;project&quot;: &quot;todo-api&quot;,
+  &quot;username&quot;: &quot;mndvns&quot;,
+  &quot;email&quot;: &quot;mail@mndvns.com&quot;,
+  &quot;fullname&quot;: &quot;Michael Andrew Vanasse&quot;,
+  &quot;description&quot;: &quot;todo api&quot;,
+  &quot;PORT&quot;: &quot;5001&quot;
+}
+</code></pre><p>Just like before, let&#39;s run</p>
+<pre><code>make start
+</code></pre><p>Once it&#39;s running, we&#39;ll check out <a href="http://localhost:5001">localhost:5001</a> and see</p>
+<p><img src="img/new-api.png" alt="Our new API"></p>
+<div class='NOTE'>
+If you&#39;re using Chrome, I highly encourage getting the <a href="https://chrome.google.com/webstore/detail/hyperchrome/micpjacfpmndnocgeldgmhdgjeaiokhk">hyper.chrome</a>
+extension. It makes navigating hypermedia APIs easy and fun.
+</div>
+
+<p>Nice! So if everything&#39;s working right, we should be able to see this API mounted on our UI
+under <code>/api</code>. Let&#39;s check...</p>
+<p><img src="img/api-mounted.png" alt="API mounted properly"></p>
+<p>Bam. Done and done.</p>
 </div></section><h2 id="appendix">Appendix</h2><section id="appendix-section" class="appendix-section"><div id="organizations" class="subsection"><h3>Organizations</h3><h4 id="-poegroup-https-github-com-poegroup-"><a href="https://github.com/poegroup">poegroup</a></h4>
 <p>Poegroup&#39;s focus is on all things web-related in order to provide a robust, production-ready
 environment for developers that is simple and easy to learn.</p>
@@ -325,7 +493,7 @@ arr.forEach(function(line, idx){
     fileHelp.className = 'filetree-help'
   }
 });
-</script></main></body><script>window.quotes = [{":c":"There are only two kinds of languages: the ones people complain about and the ones nobody uses.",":a":"Bjarne Stroustrup"},{":c":"Jesus saves but only Buddha makes incremental backups."},{":c":"Any sufficiently well-documented lisp program contains an ML program in its comments."},{":c":"If the code and the comments disagree, then both are probably wrong."},{":c":"You can't solve social problems through technical means."},{":c":"It goes against the grain of modern education to teach children to program. What fun is there in making plans, acquiring discipline in organizing thoughts, devoting attention to detail and learning to be self-critical?",":a":"Alan J. Perlis"},{":c":"Software is like entropy. It is difficult to grasp, weighs nothing, and obeys the second law of thermodynamics; i.e. it always increases."},{":c":"C++ is an horrible language. Even if the choice of C were to do *nothing* but keep the C++ programmers out, that in itself would be a huge reason to use C.",":a":"Linus Torvalds"},{":c":"It is better to have 100 functions operate on one data structure than 10 functions on 10 data structures.",":a":"Alan J. Perlis"},{":c":"Every program is a part of some other program and rarely fits.",":a":"Alan J. Perlis"},{":c":"A computer programmer is a device for turning coffee into bugs.",":a":"Bram Moolenaar"},{":c":"To err is human, but to really foul things up you need a computer.",":a":"Paul Ehrlich"},{":c":"Designing software in a team is like writing poetry in a committee meeting.",":a":"Joel Spolsky"},{":c":"Mostly, when you see programmers, they aren't doing anything. One of the attractive things about programmers is that you cannot tell whether or not they are working simply by looking at them. Very often they're sitting there seemingly drinking coffee and gossiping, or just staring into space. What the programmer is trying to do is get a handle on all the individual and unrelated ideas that are scampering around in his head.",":a":"Charles M Strauss"},{":c":"Remember, a great way to avoid broken code is to have less of it. The code that you never write will work forever.",":a":"Russ Olsen"},{":c":"Make it correct,\nmake it clear,\nmake it concise,\nmake it fast.\n\nIn that order.\n",":a":"Wes Dyer"},{":c":"Documentation is like sex. When it's good, it's fantastic. When it's bad, it's still better than nothing."},{":c":"When it comes to code it never pays to rush.",":a":"Marick's Law"},{":c":"When someone says \"I want a programming language in which I need only say what I wish done,\" give him a lollipop.\n",":a":"Alan J. Perlis"},{":c":"Some programmers, when confronted with a problem, think \"I know, I'll use floating point arithmetic.\" Now they have 1.999999999997 problems.",":a":"Tom Scott"},{":c":"People who deal with bits should expect to get bitten.",":a":"Jon Bentley"},{":c":"In the good old days physicists repeated each other's experiments, just to be sure. Today they stick to FORTRAN, so that they can share each other's programs, bugs included.",":a":"Edsger W. Dijkstra"},{":c":"The whole point of getting things done is knowing what to leave undone.",":a":"Oswald Chambers"},{":c":"One who works with their hands is a laborer.\nOne who works with their hands and their mind is a craftsman.\nOne who works with their hands, mind and heart is an artist.\n"},{":c":"There are only two kinds of languages: the ones people complain about and the ones nobody uses.",":a":"Bjarne Stroustrup"},{":c":"Some programmers try to reach higher by standing on other programmers' shoulders. Other programmers try to reach higher by standing on other programmers' toes."},{":c":"As Will Rogers would have said, \"There is no such thing as a free variable.\"\n",":a":"Alan J. Perlis"},{":c":"Think twice before you start programming or you will program twice before you start thinking."},{":c":"If you can't explain something to a six-year-old, you really don't understand it yourself.",":a":"Albert Einstein"},{":c":"When you want to do something differently from the rest of the world, it's a good idea to look into whether the rest of the world knows something you don't."},{":c":"In order to understand recursion, one must first understand recursion."},{":c":"80 percent of my problems are simple logic errors. 80 percent of the remaining problems are pointer errors. The remaining problems are hard.",":a":"Mark Donner, IBM Watson Research Center"},{":c":"We kid ourselves if we think that the ratio of procedure to data in an active data-base system can be made arbitrarily small or even kept small.",":a":"Alan J. Perlis"},{":c":"There is nothing quite so permanent as a quick fix."},{":c":"If you get it free, it is worthless. If you pay for it, it has value. If you build it yourself, it is priceless.",":a":"Raj More"},{":c":"Amateur programmers think there are 1000 bytes in a kilobyte; Real Programmers know there are 1024 meters in a kilometer."},{":c":"There's a fine line between being on the leading edge and being in the lunatic fringe.",":a":"Frank Armstrong"},{":c":"On the 7th day ... God began debugging."},{":c":"What you've described, “The bottleneck in writing code isn't in the writing of the code, it's in understanding and conceptualising what needs to be done,” is common to all highly abstract programming languages. Writing Haskell, for example, involves an hour of meditation followed by the emission of a fold expression.\n",":a":"Jonathan Feinberg"},{":c":"I hate code, and I want as little of it in our product as possible.",":a":"Jack Diedrich"},{":c":"The key to performance is elegance, not battalions of special cases.",":a":"Jon Bentley and Doug McIlroy"},{":c":"Software Engineering isn't rocket science ... it's harder."},{":c":"It's hardware that makes a machine fast. It's software that makes a fast machine slow.",":a":"Craig Bruce"},{":c":"It is practically impossible to teach good programming style to students that have had prior exposure to BASIC. As potential programmers, they are mentally mutilated beyond hope of regeneration.",":a":"E. W. Dijkstra"},{":c":"Programming is an unnatural act.",":a":"Alan J. Perlis"},{":c":"Remember, a great way to avoid broken code is to have less of it. The code that you never write will work forever.",":a":"Russ Olsen"},{":c":"You start writing code, I'll go see what the customer wants"},{":c":"The C Programming Language — A language which combines the flexibility of assembly language with the power of assembly language."},{":c":"The generation of random numbers is too important to be left to chance.",":a":"Robert R. Coveyou, Oak Ridge National Laboratory"},{":c":"The third version is the first version that doesn't suck.",":a":"Mike Simpson"},{":c":"Fifty years of programming language research, and we end up with C++ ?",":a":"Richard A. O'Keefe"},{":c":"Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",":a":"Brian Kernighan"},{":c":"Whenever two programmers meet to criticize their programs, both are silent.",":a":"Alan J. Perlis"},{":c":"Debugging is anticipated with distaste, performed with reluctance, and bragged about forever.",":a":"Dan Kaminsky"},{":c":"Tell me what you need and I'll tell you how to get along without it."},{":c":"Is it possible that software is not like anything else, that it is meant to be discarded: that the whole point is to see it as a soap bubble?",":a":"Alan J. Perlis"},{":c":"Saying that Java is good because it works on all platforms is like saying anal sex is good because it works on all genders."},{":c":"People who are really serious about software should make their own hardware.",":a":"Alan Kay"},{":c":"Programming is not like being in the CIA; you don't get credit for being sneaky. It's more like advertising; you get lots of credit for making your connections as blatant as possible.",":a":"Steve McConnell on coupling from, \"Code Complete.\""},{":c":"My assertion that we can do better with computer languages is a persistent belief and fond hope, but you'll note I don't actually claim to be either rational or right. Except when it's convenient.",":a":"Larry Wall"},{":c":"The best book on programming for the layman is \"Alice in Wonderland\"; but that's because it's the best book on anything for the layman.\n",":a":"Alan J. Perlis"},{":c":"People who are really serious about software should make their own hardware.",":a":"Alan Kay"},{":c":"It is often easier to not do something dumb than it is to do something smart."},{":c":"The key to performance is elegance, not battalions of special cases.",":a":"Jon Bentley and Doug McIlroy"},{":c":"It's 5.50 a.m.... Do you know where your stack pointer is?"},{":c":"It's not what the software does. It's what the user does.",":a":"Hugh Macleod"},{":c":"Don't code today what you can't debug tomorrow"},{":c":"I've finally learned what ‘upward compatible' means. It means we get to keep all our old mistakes.",":a":"Dennie van Tassel"},{":c":"My definition of an expert in any field is a person who knows enough about what's really going on to be scared.",":a":"P. J. Plauger"},{":c":"You can't solve social problems through technical means."},{":c":"C++ : Where friends have access to your private members.",":a":"Gavin Russell Baker"},{":c":"All parts should go together without forcing. You must remember that the parts you are reassembling were disassembled by you. Therefore, if you can't get them together again, there must be a reason. By all means, do not use a hammer.",":a":"IBM Manual, 1925"},{":c":"Artificial Intelligence is no match for natural stupidity."},{":c":"Enlightened trial and error outperforms the planning of flawless intellects.",":a":"David Kelly"},{":c":"Complexity has nothing to do with intelligence, simplicity does.",":a":"Larry Bossidy"},{":c":"If you're going to break it, then break it good. Break everything. Get to the very front of the line. Don't like move up a couple of slots. That's pointless.",":a":"Anders Hejlsberg"},{":c":"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.",":a":"Rick Osborne"},{":c":"If architects built houses the way programmers built programs, the first woodpecker to come along would destroy civilization.",":a":"Gerald Weinberg"},{":c":"I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years.",":a":"Tony (C.A.R.) Hoare"},{":c":"They won't tell you that they don't understand it; they will happily invent their way through the gaps and obscurities.",":a":"V.A. Vyssotsky on software programmers and their views on specifications"},{":c":"Every language has an optimization operator. In C++ that operator is ‘//'"},{":c":"Computers are useless. They can only give you answers.",":a":"Pablo Picasso"},{":c":"Software is like entropy. It is difficult to grasp, weighs nothing, and obeys the second law of thermodynamics; i.e. it always increases."},{":c":"When I have a specific goal in mind and a complicated piece of code to write, I spend my time making it happen rather than telling myself stories about it.",":a":"Steve Yegge"},{":c":"There is no IRL, only AFK"},{":c":"I have always wished for my computer to be as easy to use as my telephone; my wish has come true because I can no longer figure out how to use my telephone.",":a":"Bjarne Stroustrup"},{":c":"Never attribute to malice that which can be adequately explained by stupidity.",":a":"Hanlon's Razor"},{":c":"If you can't explain something to a six-year-old, you really don't understand it yourself.",":a":"Albert Einstein"},{":c":"Vi is a subset of evil."},{":c":"Interfaces keep things tidy, but don't accelerate growth: Functions do.",":a":"Alan J. Perlis"},{":c":"I think Microsoft named .Net so it wouldn't show up in a Unix directory listing.",":a":"Oktal"},{":c":"A well-written program is its own heaven; a poorly-written program is its own hell.",":a":"Tao of Programming"},{":c":"Software with no bugs is obsolete."},{":c":"Great things are not done by impulse, but by a series of small things brought together.",":a":"Vincent van Gogh"},{":c":"Software isn't about methodologies, languages, or even operating systems. It is about working applications.",":a":"Christopher Baus"},{":c":"We will never run out of things to program as long as there is a single program around.",":a":"Alan J. Perlis"},{":c":"It is practically impossible to teach good programming style to students that have had prior exposure to BASIC. As potential programmers, they are mentally mutilated beyond hope of regeneration.",":a":"E. W. Dijkstra"},{":c":"On the 7th day ... God began debugging."},{":c":"C is to programming as Latin is to literature."},{":c":"Simplicity is hard to build, easy to use, and hard to charge for. Complexity is easy to build, hard to use, and easy to charge for.",":a":"Chris Sacca"}];// get one random quote
+</script></main></body><script>window.quotes = [{":c":"The sooner you get behind in your work, the more time you have to catch up."},{":c":"I'll try to be nicer if you try to be smarter.",":a":"Assaf Nitzan"},{":c":"The two most common elements in the universe are hydrogen and stupidity.",":a":"Harlan Ellison"},{":c":"One can't proceed from the informal to the formal by formal means.",":a":"Alan J. Perlis"},{":c":"I love deadlines. I like the whooshing sound they make as they fly by.",":a":"Douglas Adams"},{":c":"Anyone who has a wife and small kids knows that programming belongs to the easy things in life."},{":c":"Beware of the Turing tar-pit in which everything is possible but nothing of interest is easy.",":a":"Alan J. Perlis"},{":c":"When debugging, novices insert corrective code; experts remove defective code.",":a":"Richard Pattis"},{":c":"Beware of the Turing tar-pit in which everything is possible but nothing of interest is easy.",":a":"Alan J. Perlis"},{":c":"God could create the world in six days because he didn't have to make it compatible with the previous version."},{":c":"It is easier to optimize correct code than to correct optimized code."},{":c":"The computer is the ultimate polluter: its feces are indistinguish- able from the food it produces.",":a":"Alan J. Perlis"},{":c":"If you get it free, it is worthless. If you pay for it, it has value. If you build it yourself, it is priceless.",":a":"Raj More"},{":c":"To most Java developers, Ruby/Rails is like a mistress. Ruby/Rails is young, new, and exciting; but eventually we go back to old faithful, dependable, and employable Java with some new tricks and idioms and we are the better programmer for it.",":a":"Juixe TechKnow"},{":c":"Anyone who has a wife and small kids knows that programming belongs to the easy things in life."},{":c":"Because of its vitality, the computing field is always in desperate need of new cliches: Banality soothes our nerves.",":a":"Alan J. Perlis"},{":c":"Saying that Java is good because it works on all platforms is like saying anal sex is good because it works on all genders."},{":c":"To understand a program you must become both the machine and the program.",":a":"Alan J. Perlis"},{":c":"Software and cathedrals are much the same - first we build them, then we pray."},{":c":"You might as well pay your customers 50K because they are just your QA.",":a":"Juixe TechKnow"},{":c":"Ready, fire, aim: the fast approach to software development.\nReady, aim, aim, aim, aim: the slow approach to software development. \n"},{":c":"The trouble with programmers is that you can never tell what a programmer is doing until it's too late.\"",":a":"Seymour Cray"},{":c":"Every dark corner you haven't explored with your flashlight is full of bugs.",":a":"Kent Beck and Martin Fowler"},{":c":"Professionalism has no place in art, and hacking is art. Software Engineering might be science; but that's not what I do. I'm a hacker, not an engineer.",":a":"Jamie Zawinski"},{":c":"... one of the main causes of the fall of the Roman Empire was that, lacking zero, they had no way to indicate successful termination of their C programs.",":a":"Robert Firth"},{":c":"You can't eliminate problems, but you can make trades to get problems that you prefer over the ones you have now.",":a":"Eric Sink's Axiom of Software Development"},{":c":"FORTRAN, the infantile disorder, by now nearly 20 years old, is hopelessly inadequate for whatever computer application you have in mind today: it is now too clumsy, too risky, and too expensive to use.",":a":"E. W. Dijkstra"},{":c":"Once you've dressed and before you leave the house, look in the mirror and take at least one thing off.",":a":"Coco Chanel"},{":c":"You start writing code, I'll go see what the customer wants"},{":c":"Software is like entropy. It is difficult to grasp, weighs nothing, and obeys the second law of thermodynamics; i.e. it always increases."},{":c":"Purely applicative languages are poorly applicable.",":a":"Alan J. Perlis"},{":c":"Easy things should be easy and hard things should be possible.",":a":"Larry Wall"},{":c":"Talk is cheap, show me the code!",":a":"Linus Torvalds"},{":c":"When all you have is a hammer, everything starts to look like a nail."},{":c":"It should be noted that no ethically-trained software engineer would ever consent to write a DestroyBaghdad procedure. Basic professional ethics would instead require him to write a DestroyCity procedure, to which Baghdad could be given as a parameter.",":a":"Nathaniel S Borenstein"},{":c":"The first 90% of the code accounts for the first 90% of the development time. The remaining 10% of the code accounts for the other 90% of the development time.",":a":"Tom Cargill"},{":c":"It works on my machine."},{":c":"Computer programmers don't byte, they nibble a bit."},{":c":"Programming is difficult. At its core, it is about managing complexity. Computer programs are the most complex things that humans make. Quality is illusive and elusive.",":a":"Douglas Crockford"},{":c":"From a programmer's point of view, the user is a peripheral that types when you issue a read request.",":a":"Peter Williams"},{":c":"Deleted code is debugged code.",":a":"Jeff Sickel"},{":c":"APL, I believe, can only be learned by writing one-liners–only by seeing in a sense, what you can compress into a line.",":a":"Alan J Perlis"},{":c":"C++: an octopus made by nailing extra legs onto a dog.",":a":"Steve Taylor"},{":c":"APL, I believe, can only be learned by writing one-liners–only by seeing in a sense, what you can compress into a line.",":a":"Alan J Perlis"},{":c":"Measuring programming progress by lines of code is like measuring aircraft building progress by weight.",":a":"Bill Gates"},{":c":"If it doesn't work, change the documentation."},{":c":"The third version is the first version that doesn't suck.",":a":"Mike Simpson"},{":c":"Perhaps if we wrote programs from childhood on, as adults we'd be able to read them.",":a":"Alan J. Perlis"},{":c":"You think you know when you can learn, are more sure when you can write, even more when you can teach, but certain when you can program.",":a":"Alan J. Perlis"},{":c":"In the good old days physicists repeated each other's experiments, just to be sure. Today they stick to FORTRAN, so that they can share each other's programs, bugs included.",":a":"Edsger W. Dijkstra"},{":c":"To understand a program you must become both the machine and the program.",":a":"Alan J. Perlis"},{":c":"Perl - The only language that looks the same before and after RSA encryption.",":a":"Keith Bostic"},{":c":"If architects built houses the way programmers built programs, the first woodpecker to come along would destroy civilization.",":a":"Gerald Weinberg"},{":c":"If our customers wanted a product that worked that way, tell them to purchase a product that works that way."},{":c":"Any technology that surpasses 50% penetration will never double again (in any number of months).",":a":"Peter Norvig's law"},{":c":"Everyone can be taught to sculpt: Michelangelo would have had to be taught not to. So it is with great programmers.\n",":a":"Alan J. Perlis"},{":c":"We will never run out of things to program as long as there is a single program around.",":a":"Alan J. Perlis"},{":c":"In programming, everything we do is a special case of something more general -- and often we know it too quickly.",":a":"Alan J. Perlis"},{":c":"The whole point of getting things done is knowing what to leave undone.",":a":"Oswald Chambers"},{":c":"My programs don't have bugs, they just develop random features."},{":c":"If we can't fix it, then it ain't broke.",":a":"Jon Bentley"},{":c":"Good web applications should look like trifle.",":a":"Cal Henderson"},{":c":"The key to performance is elegance, not battalions of special cases.",":a":"Jon Bentley and Doug McIlroy"},{":c":"Lines of code are only worth counting, when time has come to delete them."},{":c":"If you don't have time to do it right, when will you have time to do it over?",":a":"John Wooden, basketball coach"},{":c":"No code is faster than no code."},{":c":"A complex system that works is invariably found to have evolved from a simple system that worked.",":a":"John Gall"},{":c":"He who hasn't hacked assembly language as a youth has no heart. He who does as an adult has no brain.",":a":"John Moore"},{":c":"Are you quite sure that all those bells and whistles, all those wonderful facilities of your so called powerful programming languages, belong to the solution set rather than the problem set?",":a":"Edsger W. Dijkstra"},{":c":"In English every word can be verbed. Would that it were so in our programming languages.",":a":"Alan J. Perlis"},{":c":"When all you have is a hammer, everything starts to look like a nail."},{":c":"If you can imagine a society in which the computer - robot is the only menial, you can imagine anything.",":a":"Alan J. Perlis"},{":c":"All parts should go together without forcing. You must remember that the parts you are reassembling were disassembled by you. Therefore, if you can't get them together again, there must be a reason. By all means, do not use a hammer.",":a":"IBM Manual, 1925"},{":c":"In a world without walls and fences, who needs Windows and Gates?"},{":c":"Every truth passes through three stages before it is recognized. In the first, it is ridiculed, in the second it is opposed, in the third it is regarded as self-evident.",":a":"Arthur Schopenhauer"},{":c":"As a rule, software systems do not work well until they have been used, and have failed repeatedly, in real applications.",":a":"Dave Parnas"},{":c":"Designing software in a team is like writing poetry in a committee meeting.",":a":"Joel Spolsky"},{":c":"There's a fine line between being on the leading edge and being in the lunatic fringe.",":a":"Frank Armstrong"},{":c":"When in doubt, leave it out.",":a":"Joshua Bloch"},{":c":"From a programmer's point of view, the user is a peripheral that types when you issue a read request.",":a":"Peter Williams"},{":c":"Good programmers never write what they can steal or borrow.",":a":"Jeff Atwood"},{":c":"In C, its easy to shoot yourself in the foot. C++ makes it more difficult, but when you do, you'll blow your whole leg off.",":a":"Stroustrup"},{":c":"Simplicity is hard to build, easy to use, and hard to charge for. Complexity is easy to build, hard to use, and easy to charge for.",":a":"Chris Sacca"},{":c":"If you've seen one picture of the Mandelbrot Set, you've seen them all.",":a":"Bill Karwin"},{":c":"You can't solve social problems through technical means."},{":c":"There are only two industries that refer to their customers as users: the computer industry and the drug trade.",":a":"Edward Tufte"},{":c":"Every program attempts to expand until it can read mail. Those programs which cannot so expand are replaced by ones which can.",":a":"Jamie Zawinski"},{":c":"To err is human, but to really foul things up you need a computer.",":a":"Paul Ehrlich"},{":c":"The best book on programming for the layman is \"Alice in Wonderland\"; but that's because it's the best book on anything for the layman.\n",":a":"Alan J. Perlis"},{":c":"C++ is to C as Lung Cancer is to Lung."},{":c":"There are only two hard problems in Computer Science: cache invalidation and naming things.",":a":"Phil Karlton"},{":c":"Re graphics: A picture is worth 10K words - but only those to describe the picture. Hardly any sets of 10K words can be adequately described with pictures.",":a":"Alan J. Perlis"},{":c":"It's difficult to extract sense from strings, but they're the only communication coin we can count on.",":a":"Alan J. Perlis"},{":c":"Think of compilation as cooking. Dynamic typing means the steak is juicy and still a little red, like red meat is supposed to be. Static typing means you burnt it to a crisp.",":a":"Erik Naggum"},{":c":"An ideal world is left as an exercise to the reader.",":a":"From Paul Graham's \"On Lisp\""},{":c":"Bringing computers into the home won't change either one, but may revitalize the corner saloon.",":a":"Alan J. Perlis"},{":c":"Never memorize what you can look up in books.",":a":"Albert Einstein"},{":c":"... what society overwhelmingly asks for is snake oil. Of course, the snake oil has the most impressive names — otherwise you would be selling nothing — like \"Structured Analysis and Design\", \"Software Engineering\", \"Maturity Models\", \"Management Information Systems\", \"Integrated Project Support Environments\" \"Object Orientation\" and \"Business Process Re-engineering\" (the latter three being known as IPSE, OO and BPR, respectively).\n",":a":"Edsger W. Dijkstra"},{":c":"If we're supposed to work in Hex, why have we only got A fingers?"},{":c":"Sometimes, the elegant implementation is just a function. Not a method. Not a class. Not a framework. Just a function.",":a":"John Carmack"}];// get one random quote
 function randomQuote(){
   var obj = quotes[Math.floor(Math.random()*quotes.length)];
   document.querySelector('.quote-value').textContent = obj[':c'];
