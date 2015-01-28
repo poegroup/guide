@@ -1,4 +1,21 @@
-<!DOCTYPE html><html><head><title>Poe Guide</title><!-- style: include:styl styles/index.styl--><link type="text/css" rel="stylesheet" href="styles/index.css"><script src="//use.typekit.net/ldo1umf.js"></script><script>try{Typekit.load();}catch(e){}</script><script>(function(d) {var config = {kitId: 'ldo1umf', scriptTimeout: 3000}, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script></head><body><main><h1><span>Poe Guide</span></h1><hr class="menu-top"><menu><ul><li class="index index-complete">1</li><li class="menuitem menuitem-complete"><a href="#introduction">Introduction</a></li><li class="menuitem menuitem-complete"><a href="#overview">Overview</a></li><li class="menuitem menuitem-complete"><a href="#getting-started">Getting Started</a></li><li class="menuitem menuitem-complete"><a href="#hello-world">Hello World</a></li></ul><ul><li class="index index-undefined">2</li><li class="menuitem menuitem-undefined"><a href="#basic-ui">Basic UI</a></li><li class="menuitem menuitem-complete"><a href="#structure">Structure</a></li><li class="menuitem menuitem-complete"><a href="#markup">Markup</a></li><li class="menuitem menuitem-complete"><a href="#styles">Styles</a></li><li class="menuitem menuitem-complete"><a href="#routes">Routes</a></li></ul><ul><li class="index index-undefined">3</li><li class="menuitem menuitem-undefined"><a href="#basic-api">Basic API</a></li><li class="menuitem menuitem-complete"><a href="#initializing">Initializing</a></li><li class="menuitem menuitem-complete"><a href="#login">Login</a></li><li class="menuitem menuitem-complete"><a href="#mongoose">Mongoose</a></li><li class="menuitem menuitem-incomplete"><a href="#wiring-up">Wiring Up</a></li><!-- +listitem('Front-Ends', 'incomplete')--><!-- +listitem('Contracts', 'incomplete')--><!-- +listitem('Systems', 'incomplete')--></ul><ul><li class="index index-incomplete">4</li><li class="menuitem menuitem-incomplete"><a href="#client-hypermedia">Client Hypermedia</a></li><li class="menuitem menuitem-incomplete"><a href="#data-binding">Data Binding</a></li><li class="menuitem menuitem-incomplete"><a href="#forms">Forms</a></li><li class="menuitem menuitem-incomplete"><a href="#composition">Composition</a></li><li class="menuitem menuitem-incomplete"><a href="#a-front-end">A Front End</a></li></ul><ul><li class="index index-incomplete">5</li><li class="menuitem menuitem-incomplete"><a href="#api-design">API Design</a></li><li class="menuitem menuitem-incomplete"><a href="#hypermedia">Hypermedia</a></li><li class="menuitem menuitem-incomplete"><a href="#specs-and-standards">Specs and Standards</a></li><li class="menuitem menuitem-incomplete"><a href="#a-mock-api">A Mock API</a></li></ul><ul><li class="index index-undefined">6</li><li class="menuitem menuitem-undefined"><a href="#appendix">Appendix</a></li><li class="menuitem menuitem-undefined"><a href="#organizations">Organizations</a></li><li class="menuitem menuitem-undefined"><a href="#resources">Resources</a></li><li class="menuitem menuitem-incomplete"><a href="#credits">Credits</a></li><li class="menuitem menuitem-incomplete"><a href="#license">License</a></li></ul></menu><hr class="menu-bottom"><div class="quotes"><div class="quote"><blockquote class="quote-value"></blockquote><strong class="quote-author"></strong></div></div><h2 id="introduction">Introduction</h2><section id="introduction-section" class="introduction-section"><div id="overview" class="subsection"><h3>Overview</h3><p>  Poe is a collection of open-source tools for web developers, and Poe UI is its front-end framework.</p>
+<!DOCTYPE html><html><head><title>Poe Guide</title><!-- style: include:styl styles/index.styl--><link type="text/css" rel="stylesheet" href="styles/index.css"><script src="//use.typekit.net/ldo1umf.js"></script><script>try{Typekit.load();}catch(e){}</script><script>(function(d) {var config = {kitId: 'ldo1umf', scriptTimeout: 3000}, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script></head><body><main><div class="main-inner"><h1><span>Poe Guide</span></h1><script>
+var currentTheme = window.localStorage.getItem('theme');
+if (!currentTheme) setTheme('dark-theme');
+else setTheme(currentTheme);
+
+function toggleTheme() {
+  setTheme(switchTheme());
+}
+
+function setTheme(theme) {
+  window.localStorage.setItem('theme', theme);
+  document.body.className = theme;
+}
+
+function switchTheme() {
+  return (window.localStorage.getItem('theme') === 'light-theme' ? 'dark-theme' : 'light-theme');
+}
+</script><hr class="menu-top"><menu><ul><li class="index index-complete">1</li><li class="menuitem menuitem-complete"><a href="#introduction">Introduction</a></li><li class="menuitem menuitem-complete"><a href="#overview">Overview</a></li><li class="menuitem menuitem-complete"><a href="#getting-started">Getting Started</a></li><li class="menuitem menuitem-complete"><a href="#hello-world">Hello World</a></li></ul><ul><li class="index index-undefined">2</li><li class="menuitem menuitem-undefined"><a href="#basic-ui">Basic UI</a></li><li class="menuitem menuitem-complete"><a href="#structure">Structure</a></li><li class="menuitem menuitem-complete"><a href="#markup">Markup</a></li><li class="menuitem menuitem-complete"><a href="#styles">Styles</a></li><li class="menuitem menuitem-complete"><a href="#routes">Routes</a></li></ul><ul><li class="index index-undefined">3</li><li class="menuitem menuitem-undefined"><a href="#basic-api">Basic API</a></li><li class="menuitem menuitem-complete"><a href="#initializing">Initializing</a></li><li class="menuitem menuitem-complete"><a href="#login">Login</a></li><li class="menuitem menuitem-complete"><a href="#mongoose">Mongoose</a></li><li class="menuitem menuitem-complete"><a href="#wiring-it-up">Wiring It Up</a></li></ul><ul><li class="index index-incomplete">4</li><li class="menuitem menuitem-incomplete"><a href="#client-hypermedia">Client Hypermedia</a></li><li class="menuitem menuitem-incomplete"><a href="#data-binding">Data Binding</a></li><li class="menuitem menuitem-incomplete"><a href="#forms">Forms</a></li><li class="menuitem menuitem-incomplete"><a href="#composition">Composition</a></li><li class="menuitem menuitem-incomplete"><a href="#a-front-end">A Front End</a></li></ul><ul><li class="index index-incomplete">5</li><li class="menuitem menuitem-incomplete"><a href="#api-design">API Design</a></li><li class="menuitem menuitem-incomplete"><a href="#hypermedia">Hypermedia</a></li><li class="menuitem menuitem-incomplete"><a href="#specs-and-standards">Specs and Standards</a></li><li class="menuitem menuitem-incomplete"><a href="#a-mock-api">A Mock API</a></li></ul><ul><li class="index index-undefined">6</li><li class="menuitem menuitem-undefined"><a href="#appendix">Appendix</a></li><li class="menuitem menuitem-undefined"><a href="#organizations">Organizations</a></li><li class="menuitem menuitem-undefined"><a href="#resources">Resources</a></li><li class="menuitem menuitem-incomplete"><a href="#credits">Credits</a></li><li class="menuitem menuitem-incomplete"><a href="#license">License</a></li></ul></menu><hr class="menu-bottom"><div class="quotes"><div class="quote"><blockquote class="quote-value"></blockquote><strong class="quote-author"></strong></div></div><a href="#dark" onclick="toggleTheme();" class="btn-toggle">clr</a><h2 id="introduction">Introduction</h2><h2 class="section-filler">Introduction</h2><section id="introduction-section" class="introduction-section"><div id="overview" class="subsection"><h3>Overview</h3><p>  Poe is a collection of open-source tools for web developers, and Poe UI is its front-end framework.</p>
 <p>  Let&#39;s start with the basics by generating a skeleton Poe UI app locally.</p>
 </div><div id="getting-started" class="subsection"><h3>Getting Started</h3><p>First off, this tutorial assumes a basic familiarity with the terminal, JS/HTML/CSS, and an editor of some kind.
 As new concepts are introduced, please check out the resources we provide and revisit as necessary. We will be
@@ -63,7 +80,7 @@ run on your machine exactly as it does in production.
 and see.</p>
 <p><img src="img/new-app.png" alt="A newly initialied Poe UI app"></p>
 <p>Great! We&#39;ve got a running app.</p>
-</div></section><h2 id="basic-ui">Basic UI</h2><section id="basic-ui-section" class="basic-ui-section"><div id="structure" class="subsection"><h3>Structure</h3><p>Let's start by exploring how the project is organized. Here is our current project's tree:</p><div class="filetree"><div class="filetree-help"><p>Hover over a file see more information.</p>
+</div></section><h2 id="basic-ui">Basic UI</h2><h2 class="section-filler">Basic UI</h2><section id="basic-ui-section" class="basic-ui-section"><div id="structure" class="subsection"><h3>Structure</h3><p>Let's start by exploring how the project is organized. Here is our current project's tree:</p><div class="filetree"><div class="filetree-help"><p>Hover over a file see more information.</p>
 <p>Click a file to toggle the information on/off.</p>
 </div><div class="filetree-code"><div class="grouping parent-3 configuration"><div class="grouping-single">Configuration</div><div class="line file configuration"><code class="indent">|-- </code><div class="text"><code class="text-code">.env</code><input type="checkbox" hidden class="text-checkbox"><div class="inner"><div class="raw-file configuration">NODE_ENV=development
 API_URL=http://localhost:5001
@@ -225,14 +242,14 @@ block body
   header(data-ng-include, src=&quot;'/partials/header.jade'&quot;)
   main(data-ng-view=&quot;&quot;)
 </div><p>This is the &#39;chrome&#39; for our app, i.e., the area surrounding the app that remains
-the same. The <code>main</code> element is where our <strong><code>public/partials/index.jade</code></strong> is loaded.</p>
+the same. The <code>main</code> element is where our <code>public/partials/index.jade</code> is loaded.</p>
 <p>To include another partial (like a footer), simply point to the path in the <code>src</code> attribute
-of an element as the <strong><code>header</code></strong> does here.</p>
+of an element as the <code>header</code> does here.</p>
 <div class='NOTE'>
-Note that the path is wrapped in double quotations (&quot;&#39;path/here&#39;&quot;).
+Note that the path is wrapped in double quotations <em>(&quot;&#39;path/here&#39;&quot;)</em>.
 </div>
 
-<p>For more information on Jade, check out <strong><a href="http://jade-lang.com/">the docs</a></strong>.</p>
+<p>For more information on Jade, check out <a href="http://jade-lang.com/">the docs</a>.</p>
 </div></div></div></div></div></div></div><div id="markup" class="subsection"><h3>Markup</h3><p>Now that we have a lay of the land, maybe we should edit a file.
 Since this will be a UI app most of our time in this project will
 be spent in the <code>public</code> directory.</p>
@@ -366,7 +383,7 @@ show us the form at the <code>login.jade</code> partial. Let&#39;s see:</p>
 <p><img src="img/login.png" alt="Login page"></p>
 <p>Perfect!</p>
 <p>But to create an actual login, we&#39;ll need to set up an API.</p>
-</div></section><h2 id="basic-api">Basic API</h2><section id="basic-api-section" class="basic-api-section"><div id="initializing" class="subsection"><h3>Initializing</h3><p>Let&#39;s navigate to a new directory like we did earlier.</p>
+</div></section><h2 id="basic-api">Basic API</h2><h2 class="section-filler">Basic API</h2><section id="basic-api-section" class="basic-api-section"><div id="initializing" class="subsection"><h3>Initializing</h3><p>Let&#39;s navigate to a new directory like we did earlier.</p>
 <pre><code>mkdir -p ~/Projects/mndvns/todo-api
 cd ~/Projects/mndvns/todo-api
 poe create api
@@ -569,7 +586,194 @@ switched to db todo-api
 ]
 &gt;
 </code></pre><p>Booya! We have out first user, John Rambo.</p>
-</div></section><h2 id="appendix">Appendix</h2><section id="appendix-section" class="appendix-section"><div id="organizations" class="subsection"><h3>Organizations</h3><h4 id="-poegroup-https-github-com-poegroup-"><a href="https://github.com/poegroup">poegroup</a></h4>
+</div><div id="wiring-it-up" class="subsection"><h3>Wiring It Up</h3><p>Now let&#39;s return to our UI app, which is still running on <code>localhost:5000</code>.</p>
+<p>Let&#39;s make that loging page we made earlier into the new home page. Instead of rerouting users,
+we&#39;ll just default to having them login or signup. That&#39;s a pretty good practice, right?</p>
+<p>Remember where we added our <code>/login</code> route? We&#39;re just going to change it right there.</p>
+<p>In case you forgot, we&#39;re going to navigate to the <code>public/javascript/routes.js</code> file. We&#39;ll change
+it from</p>
+<pre><code>module.exports = {
+  &#39;/&#39;: &#39;index&#39;,
+  &#39;/login&#39;: &#39;login&#39;
+};
+</code></pre><p>to</p>
+<pre><code>module.exports = {
+  &#39;/&#39;: &#39;login&#39;
+};
+</code></pre><p>Again, the key <code>/</code> signifies the route, and the value <code>login</code> signifies the partial that will
+be loaded on the page.</p>
+<p>So now if we navigate to our root at <code>localhost:5000</code>...</p>
+<p><img src="img/ui-no-change.png" alt="UI no change"></p>
+<p>That&#39;s odd, it doesn&#39;t seem to have changed... even though we&#39;ve saved the files, the server isn&#39;t
+picking it up.</p>
+<div class='INFO'>
+<p>
+When you&#39;re having trouble seeing changes happen on the front-end, there are a few things you can
+check for right off the bat. 9/10 times, it&#39;s one of these.
+</p>
+</div>
+
+<h4 id="-1-build-error"><strong>1.</strong> Build Error</h4>
+<div class='INFO no-header'>
+<p>
+If you&#39;re not seeing a change in the page, the first thing you should do is check your server. Is
+is displaying normal output? It&#39;s normal to leave a character misplaced in your files, and often times
+this will cause the builders to fail before they have a chance to send it to the browser. So remember:
+always check your server first.
+</p>
+</div>
+
+<h4 id="-2-cached-resources"><strong>2.</strong> Cached Resources</h4>
+<div class='INFO no-header'>
+<p>
+Since we&#39;ll be working very closely with APIs, it&#39;s important to remember that your browser has some
+development gotchas that you&#39;ll stumble upon now and then. Usually, it&#39;s related to caching in one
+form or another.
+</p>
+<p>
+Remember to disable your cache (unless specifically testing it). In Chrome, you can do this easily by
+opening the Developer Tools and clicking <code>Disable Cache</code> in the <code>Network</code> tab.
+</p>
+
+<img src="img/disable-cache.png" alt="Disable your cache">
+</div>
+
+<h4 id="-3-server-resart-required"><strong>3.</strong> Server Resart Required</h4>
+<div class='INFO no-header'>
+<p>
+Some files, like the <code>.env</code> file, don&#39;t initiate a restart in your app. Poe UI&#39;s file watcher also
+doesn&#39;t follow symlinks, so if you&#39;re linked to an npm or component project, you won&#39;t have that
+project&#39;s files watched, and you&#39;ll have to trigger the builds yourself in some other way.
+</p>
+<p>
+And when in doubt, just restart the server and <code>make start</code> again.
+</p>
+</div>
+
+<p><img src="img/todo-changed.png" alt="Todo changed"></p>
+<p>There we are. Now, instead of hard coding the values, let&#39;s use the forms that the API&#39;s providing.</p>
+<p>If you&#39;re not familiar with <code>hyper+json</code>, you should give the <a href="https://github.com/hypergroup/hyper-json">spec</a> a
+quick once over. We&#39;ll be referencing it often, on the front- and back-end of our applications.</p>
+<p>To render hyper+json forms, we&#39;ll use the <a href="https://github.com/hypergroup/ng-hyper">ng-hyper</a> angular/hypermedia
+client.</p>
+<p>Again, if you&#39;re not familiar with <code>ng-hyper</code> at all, <a href="https://github.com/hypergroup/ng-hyper">here are the docs</a>
+so you can refer to terms or concepts as we go.</p>
+<p>Here&#39;s our <code>ng-hyper</code>-ized login form in <code>login.jade</code>:</p>
+<pre><code>form(data-hyper-form=&quot;.login&quot;)
+  div(data-ng-repeat=&quot;input in inputs&quot;)
+    input(data-hyper-input=&quot;input&quot;)
+  input.button-primary(type=&quot;submit&quot; value=&quot;Login&quot;)
+</code></pre><p>It doesn&#39;t look much different than our old form. But now we&#39;ve relieved the front-end of deciding how
+to connect to the server; the <code>ng-hyper</code> client has mounted the <code>action</code> and <code>method</code> for us, so this
+form is ready to go.</p>
+<p><img src="img/login-404.png" alt="A 404 response for login"></p>
+<p>Hmm, it doesn&#39;t seem to work... or does it? Well, we told it not to. User <code>foo</code> doesn&#39;t exist, which means a <code>404</code>
+is exactly the right response. We handle this at about line 100 of our api.js. Here&#39;s a refresher if you&#39;re lazy...</p>
+<pre><code>api.post(&#39;/&#39;, function(req, res, next) {
+  var b = req.body;
+  var username = b.username;
+  if (!username) return res.send(400);
+  User.find({username: username}, function(err, users) {
+    if (err) return next(err);
+    if (!users || !users[0]) return res.send(404);
+    var user = users[0];
+    if (user.password !== b.password) return res.send(401);
+    res.redirect(req.base + &#39;/&#39; + user._id);
+  });
+});
+</code></pre><p>Ah, that&#39;s right; our user&#39;s name is <code>rambo</code>. Let&#39;s try that.</p>
+<p><img src="img/rambo-404.png" alt="Rambo gets a 404"></p>
+<p>Another 404, but this one is different: it tried to redirect us to another page, just like we told it to in our
+<code>api.js</code>:</p>
+<pre><code>res.redirect(req.base + &#39;/&#39; + user._id);
+</code></pre><p>So now let&#39;s head back to the front end to make out user&#39;s page.</p>
+<style>/* Solarized Dark 
+
+For use with Jekyll and Pygments
+
+http://ethanschoonover.com/solarized
+
+SOLARIZED HEX      ROLE
+--------- -------- ------------------------------------------
+base03    #002b36  background
+base01    #586e75  comments / secondary content
+base1     #93a1a1  body text / default code / primary content
+orange    #cb4b16  constants
+red       #dc322f  regex, special keywords
+blue      #268bd2  reserved keywords
+cyan      #2aa198  strings, numbers
+green     #859900  operators, other keywords
+*/
+
+.highlight { background-color: #002b36; color: #93a1a1 }
+.highlight .c { color: #586e75 } /* Comment */
+.highlight .err { color: #93a1a1 } /* Error */
+.highlight .g { color: #93a1a1 } /* Generic */
+.highlight .k { color: #859900 } /* Keyword */
+.highlight .l { color: #93a1a1 } /* Literal */
+.highlight .n { color: #93a1a1 } /* Name */
+.highlight .o { color: #859900 } /* Operator */
+.highlight .x { color: #cb4b16 } /* Other */
+.highlight .p { color: #93a1a1 } /* Punctuation */
+.highlight .cm { color: #586e75 } /* Comment.Multiline */
+.highlight .cp { color: #859900 } /* Comment.Preproc */
+.highlight .c1 { color: #586e75 } /* Comment.Single */
+.highlight .cs { color: #859900 } /* Comment.Special */
+.highlight .gd { color: #2aa198 } /* Generic.Deleted */
+.highlight .ge { color: #93a1a1; font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #dc322f } /* Generic.Error */
+.highlight .gh { color: #cb4b16 } /* Generic.Heading */
+.highlight .gi { color: #859900 } /* Generic.Inserted */
+.highlight .go { color: #93a1a1 } /* Generic.Output */
+.highlight .gp { color: #93a1a1 } /* Generic.Prompt */
+.highlight .gs { color: #93a1a1; font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #cb4b16 } /* Generic.Subheading */
+.highlight .gt { color: #93a1a1 } /* Generic.Traceback */
+.highlight .kc { color: #cb4b16 } /* Keyword.Constant */
+.highlight .kd { color: #268bd2 } /* Keyword.Declaration */
+.highlight .kn { color: #859900 } /* Keyword.Namespace */
+.highlight .kp { color: #859900 } /* Keyword.Pseudo */
+.highlight .kr { color: #268bd2 } /* Keyword.Reserved */
+.highlight .kt { color: #dc322f } /* Keyword.Type */
+.highlight .ld { color: #93a1a1 } /* Literal.Date */
+.highlight .m { color: #2aa198 } /* Literal.Number */
+.highlight .s { color: #2aa198 } /* Literal.String */
+.highlight .na { color: #93a1a1 } /* Name.Attribute */
+.highlight .nb { color: #B58900 } /* Name.Builtin */
+.highlight .nc { color: #268bd2 } /* Name.Class */
+.highlight .no { color: #cb4b16 } /* Name.Constant */
+.highlight .nd { color: #268bd2 } /* Name.Decorator */
+.highlight .ni { color: #cb4b16 } /* Name.Entity */
+.highlight .ne { color: #cb4b16 } /* Name.Exception */
+.highlight .nf { color: #268bd2 } /* Name.Function */
+.highlight .nl { color: #93a1a1 } /* Name.Label */
+.highlight .nn { color: #93a1a1 } /* Name.Namespace */
+.highlight .nx { color: #93a1a1 } /* Name.Other */
+.highlight .py { color: #93a1a1 } /* Name.Property */
+.highlight .nt { color: #268bd2 } /* Name.Tag */
+.highlight .nv { color: #268bd2 } /* Name.Variable */
+.highlight .ow { color: #859900 } /* Operator.Word */
+.highlight .w { color: #93a1a1 } /* Text.Whitespace */
+.highlight .mf { color: #2aa198 } /* Literal.Number.Float */
+.highlight .mh { color: #2aa198 } /* Literal.Number.Hex */
+.highlight .mi { color: #2aa198 } /* Literal.Number.Integer */
+.highlight .mo { color: #2aa198 } /* Literal.Number.Oct */
+.highlight .sb { color: #586e75 } /* Literal.String.Backtick */
+.highlight .sc { color: #2aa198 } /* Literal.String.Char */
+.highlight .sd { color: #93a1a1 } /* Literal.String.Doc */
+.highlight .s2 { color: #2aa198 } /* Literal.String.Double */
+.highlight .se { color: #cb4b16 } /* Literal.String.Escape */
+.highlight .sh { color: #93a1a1 } /* Literal.String.Heredoc */
+.highlight .si { color: #2aa198 } /* Literal.String.Interpol */
+.highlight .sx { color: #2aa198 } /* Literal.String.Other */
+.highlight .sr { color: #dc322f } /* Literal.String.Regex */
+.highlight .s1 { color: #2aa198 } /* Literal.String.Single */
+.highlight .ss { color: #2aa198 } /* Literal.String.Symbol */
+.highlight .bp { color: #268bd2 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #268bd2 } /* Name.Variable.Class */
+.highlight .vg { color: #268bd2 } /* Name.Variable.Global */
+.highlight .vi { color: #268bd2 } /* Name.Variable.Instance */
+.highlight .il { color: #2aa198 } /* Literal.Number.Integer.Long */</style></div></section><h2 id="appendix">Appendix</h2><h2 class="section-filler">Appendix</h2><section id="appendix-section" class="appendix-section"><div id="organizations" class="subsection"><h3>Organizations</h3><h4 id="-poegroup-https-github-com-poegroup-"><a href="https://github.com/poegroup">poegroup</a></h4>
 <p>Poegroup&#39;s focus is on all things web-related in order to provide a robust, production-ready
 environment for developers that is simple and easy to learn.</p>
 <h4 id="-hypergroup-https-github-com-hypergroup-"><a href="https://github.com/hypergroup">hypergroup</a></h4>
@@ -599,7 +803,61 @@ framework with a bottom-up approach. Shoelace also manages tools for colors, fon
 <p>a useful Chrome extension for Angular.js</p>
 </li>
 </ul>
-</div></section><script>var REVEAL_TIME = 2000;
+</div></section><script>
+var h2s = document.querySelectorAll('h2');
+for (var i = 0, l = h2s.length, buff = []; i < l; i++) {
+  h2s[i].style.zIndex = i + 1;
+  if (h2s[i].className !== 'section-filler') buff.push(h2s[i]);
+}
+
+buff.map(function(el, i) {
+  var fun = throttle(maybeResize.bind(el), 100, 100);
+  window.addEventListener('scroll', fun);
+})
+
+function maybeResize(event) {
+  var el = this;
+  var pos = getPosition(this).y;
+  var init = this.init = this.init || (window.scrollY + pos + 50)
+  if (window.scrollY > init) {
+    this.style.position = 'fixed';
+    this.style.top = '0px';
+    this.className = 'active';
+    return;
+  }
+  this.style.position = 'absolute';
+  this.style.top = 'initial';
+  this.className = '';
+}
+
+function getPosition(element) {
+  var xPosition = 0;
+  var yPosition = 0;
+  while(element) {
+    xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+    yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+    element = element.offsetParent;
+  }
+  return { x: xPosition, y: yPosition };
+}
+
+function throttle (func, wait, max) {
+  max = max || 1;
+  var rtn; // return value
+  var last = 0; // last invokation timestamp
+  var count = 0; // number of times invoked
+  return function throttled () {
+    var now = new Date().getTime();
+    var delta = now - last;
+    if (delta >= wait) { // reset
+      last = now;
+      count = 0;
+    }
+    if (count++ < max) rtn = func.apply(this, arguments);
+    return rtn;
+  };
+}
+var REVEAL_TIME = 2000;
 
 var fileContent = document.createElement('div');
 fileContent.className = 'filetree-content';
@@ -662,7 +920,7 @@ arr.forEach(function(line, idx){
     fileHelp.className = 'filetree-help'
   }
 });
-</script></main></body><script>window.quotes = [{":c":"All programmers are optimists.",":a":"Frederick Brooks"},{":c":"Whereas Europeans generally pronounce my name the right way ('Nick-louse Veert'), Americans invariably mangle it into 'Nickel's Worth.' This is to say that Europeans call me by name, but Americans call me by value.",":a":"Niklaus Wirth"},{":c":"If the code and the comments disagree, then both are probably wrong."},{":c":"When we understand knowledge-based systems, it will be as before -- except our fingertips will have been singed.",":a":"Alan J. Perlis"},{":c":"Only Half of programming is coding. The other 90% is debugging."},{":c":"Education is the process of learning more and more about less and less until one knows everything about nothing and is entitled to call oneself 'Doctor'."},{":c":"Good web applications should look like trifle.",":a":"Cal Henderson"},{":c":"I have found that the reason a lot of people are interested in artificial intelligence is the same reason a lot of people are interested in artificial limbs: they are missing one.",":a":"David Parnas"},{":c":"Designing software in a team is like writing poetry in a committee meeting.",":a":"Joel Spolsky"},{":c":"It is easier to optimize correct code than to correct optimized code."},{":c":"A C program is like a fast dance on a newly waxed dance floor by people carrying razors.",":a":"Waldi Ravens"},{":c":"All programs have at least one bug remaining and can be optimized by one byte. Thus, by mathematical induction, all programs can be reduced to one byte. And it won't work."},{":c":"To err is human, but to really foul things up you need a computer.",":a":"Paul Ehrlich"},{":c":"Making something variable is easy. Controlling duration of constancy is the trick.",":a":"Alan J. Perlis"},{":c":"There's a fine line between being on the leading edge and being in the lunatic fringe.",":a":"Frank Armstrong"},{":c":"Computer programmers don't byte, they nibble a bit."},{":c":"Tell me what you need and I'll tell you how to get along without it."},{":c":"On the 7th day ... God began debugging."},{":c":"They won't tell you that they don't understand it; they will happily invent their way through the gaps and obscurities.",":a":"V.A. Vyssotsky on software programmers and their views on specifications"},{":c":"Human beings are not accustomed to being perfect, and few areas of human activity demand it. Adjusting to the requirement for perfection is, I think, the most difficult part of learning to program."},{":c":"C: a language that combines all the elegance and power of assembly language with all the readability and maintainability of assembly language."},{":c":"I (...) am rarely happier than when spending an entire day programming my computer to perform automatically a task that would otherwise take me a good ten seconds to do by hand.",":a":"Douglas Adams"},{":c":"If you give someone a program, you will frustrate them for a day; if you teach them how to program, you will frustrate them for a lifetime."},{":c":"Program testing can be a very effective way to show the presence of bugs, but is hopelessly inadequate for showing their absence.",":a":"Edsger Dijkstra"},{":c":"In a world without walls and fences, who needs Windows and Gates?"},{":c":"Symmetry is a complexity-reducing concept (co-routines include subroutines); seek it everywhere.",":a":"Alan J. Perlis"},{":c":"Singleton is a misconcept in OOP unless it's used as a misconcepted paradigm for application development."},{":c":"Think of all the psychic energy expended in seeking a fundamental distinction between \"algorithm\" and \"program\".\n",":a":"Alan J. Perlis"},{":c":"If it doesn't work, it doesn't matter how fast it doesn't work.",":a":"Ravera's observation on premature optimization"},{":c":"We're even wrong about which mistakes we're making.",":a":"Carl Winfeld"},{":c":"Complexity has nothing to do with intelligence, simplicity does.",":a":"Larry Bossidy"},{":c":"I will not be a lemming and follow the crowd over the cliff and into the C.",":a":"John Beidler"},{":c":"They won't tell you that they don't understand it; they will happily invent their way through the gaps and obscurities.",":a":"V.A. Vyssotsky on software programmers and their views on specifications"},{":c":"One who works with their hands is a laborer.\nOne who works with their hands and their mind is a craftsman.\nOne who works with their hands, mind and heart is an artist.\n"},{":c":"I've never written the best code I've ever written."},{":c":"The word “experienced” often refers to someone who's gotten away with doing the wrong thing more frequently than you have.\n",":a":"Laurence Gonzales"},{":c":"Every language has an optimization operator. In C++ that operator is ‘//'"},{":c":"It is easier to optimize correct code than to correct optimized code."},{":c":"To most Java developers, Ruby/Rails is like a mistress. Ruby/Rails is young, new, and exciting; but eventually we go back to old faithful, dependable, and employable Java with some new tricks and idioms and we are the better programmer for it.",":a":"Juixe TechKnow"},{":c":"We have the mini and the micro computer. In what semantic niche would the pico computer fall?",":a":"Alan J. Perlis"},{":c":"The proof of a system's value is its existence.",":a":"Alan J. Perlis"},{":c":"Ever spend a little time reading comp.lang.c++ ? That's really the best place to learn about the number of C++ users looking for a better language.",":a":"R. William Beckwith"},{":c":"C: a language that combines all the elegance and power of assembly language with all the readability and maintainability of assembly language."},{":c":"A programmer started to cuss\nBecause getting to sleep was a fuss\nAs he lay there in bed\nLooping 'round in his head\nwas: while(!asleep()) sheep++;\n"},{":c":"He who hasn't hacked assembly language as a youth has no heart. He who does as an adult has no brain.",":a":"John Moore"},{":c":"Think of it this way: threads are like salt, not like pasta. You like salt, I like salt, we all like salt. But we eat more pasta.",":a":"Larry McVoy"},{":c":"Some programmers try to reach higher by standing on other programmers' shoulders. Other programmers try to reach higher by standing on other programmers' toes."},{":c":"Wherever there is modularity there is the potential for misunderstanding: Hiding information implies a need to check communication.",":a":"Alan J. Perlis"},{":c":"Saying that Java is good because it works on all platforms is like saying anal sex is good because it works on all genders."},{":c":"Documentation is like term insurance: It satisfies because almost no one who subscribes to it depends on its benefits.",":a":"Alan J. Perlis"},{":c":"Software and cathedrals are much the same - first we build them, then we pray."},{":c":"To err is human, but to really foul things up you need a computer.",":a":"Paul Ehrlich"},{":c":"This is important, and a little hard to understand. English is useful because it's a mess. Since English is a mess, it maps well onto the problem space, which is also a mess, which we call reality. Similarly, Perl was designed to be a mess (though in the nicest of possible ways).",":a":"Larry Wall"},{":c":"Enlightened trial and error outperforms the planning of flawless intellects.",":a":"David Kelly"},{":c":"The goal of Computer Science is to build something that will last at least until we've finished building it."},{":c":"Any fool can use a computer. Many do.",":a":"Ted Nelson"},{":c":"Good programmers learn more from \"That's not what I expected!\" than from getting it right the first time.\n"},{":c":"Every dark corner you haven't explored with your flashlight is full of bugs.",":a":"Kent Beck and Martin Fowler"},{":c":"There are only two industries that refer to their customers as users: the computer industry and the drug trade.",":a":"Edward Tufte"},{":c":"When I am working on a problem I never think about beauty. I think only how to solve the problem. But when I have finished, if the solution is not beautiful, I know it is wrong.",":a":"R. Buckminster Fuller"},{":c":"Must be zero, or equal to MAPI_UNICODE. In either case, however, this parameter is ignored.",":a":"MSDN"},{":c":"The whole point of getting things done is knowing what to leave undone.",":a":"Oswald Chambers"},{":c":"If the automobile had followed the same development cycle as the computer, a Rolls-Royce would today cost $100, get a million miles per gallon, and explode once a year, killing everyone inside.",":a":"Robert X. Cringely"},{":c":"It's hardware that makes a machine fast. It's software that makes a fast machine slow.",":a":"Craig Bruce"},{":c":"Motto for a research laboratory: What we work on today, others will first think of tomorrow.",":a":"Alan J. Perlis"},{":c":"Going from programming in Pascal to programming in C, is like learning to write in Morse code.",":a":"J.P. Candusso"},{":c":"The sooner we start coding fewer frameworks and more programs the sooner we'll become better programmers.",":a":"Warped Java Guy Elementary Java Solutions"},{":c":"Program testing can be a very effective way to show the presence of bugs, but is hopelessly inadequate for showing their absence.",":a":"Edsger Dijkstra"},{":c":"It's interface, not in your face.",":a":"Kai Krause"},{":c":"It's hardware that makes a machine fast. It's software that makes a fast machine slow.",":a":"Craig Bruce"},{":c":"Walking on water and developing software from a specification are easy if both are frozen.",":a":"Edward V Berard"},{":c":"When someone says \"I want a programming language in which I need only say what I wish done,\" give him a lollipop.\n",":a":"Alan J. Perlis"},{":c":"When someone says \"I want a programming language in which I need only say what I wish done,\" give him a lollipop.\n",":a":"Alan J. Perlis"},{":c":"You can write software expecting the hardware to be perfect, unfortunately hardware is not perfect and you have to fix it in code.",":a":"W. Giraud"},{":c":"I finally found a definition for \"middleware\". \"Middleware\" is the software nobody wants to pay for.\n",":a":"Chris Stone"},{":c":"I went to school to learn how to program software applications, which inevitably have bug defects. There was no course at my university on testing, debugging, profiling, or optimization. These things you have to learn on your own, usually in a tight deadline.",":a":"Juixe TechKnow"},{":c":"C trades a slap on the wrist at compile time for a knife in the back at run time."},{":c":"God is Real, unless declared Integer."},{":c":"Software is under a constant tension. Being symbolic it is arbitrarily perfectible; but also it is arbitrarily changeable.",":a":"Alan J. Perlis"},{":c":"Sure, it's overkill. But you can never have too much overkill..."},{":c":"If Java had true garbage collection, most programs would delete themselves upon execution.",":a":"Robert Sewell"},{":c":"I'll try to be nicer if you try to be smarter.",":a":"Assaf Nitzan"},{":c":"In man-machine symbiosis, it is man who must adjust: The machines can't.",":a":"Alan J. Perlis"},{":c":"Manually managing blocks of memory in C is like juggling bars of soap in a prison shower: It's all fun and games until you forget about one of them."},{":c":"Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",":a":"Martin Fowler"},{":c":"You're never done, you just run out of time."},{":c":"One Page Principle: A specification that will not fit on one page of 8.5x11 inch paper cannot be understood.",":a":"Mark Ardis"},{":c":"Whatever code we hack, be it programming language, poetic language, math or music, curves or colourings, we create the possibility of new things entering the world. Not always great things, or even good things, but new things.",":a":"McKenzie Wark in \"A hacker Manifesto\":02\n"},{":c":"It can scarcely be denied that the supreme goal of all theory is to make the irreducible basic elements as simple and as few as possible without having to surrender the adequate representation of a single datum of experience.",":a":"Albert Einstein"},{":c":"Saying that Java is good because it works on all platforms is like saying anal sex is good because it works on all genders."},{":c":"Profanity is the one language all programmers know best."},{":c":"It works on my machine."},{":c":"I get as much enjoyment from trashing code as I do from scratching it out in the first place!"},{":c":"There will always be things we wish to say in our programs that in all known languages can only be said poorly.",":a":"Alan J. Perlis"},{":c":"Some programmers try to reach higher by standing on other programmers' shoulders. Other programmers try to reach higher by standing on other programmers' toes."},{":c":"Every program attempts to expand until it can read mail. Those programs which cannot so expand are replaced by ones which can.",":a":"Jamie Zawinski"},{":c":"Development has two outputs... Code & Bugs"},{":c":"Deleted code is debugged code.",":a":"Jeff Sickel"},{":c":"Computer programmers don't byte, they nibble a bit."},{":c":"It won't be covered in the book. The source code has to be useful for something, after all...",":a":"Larry Wall"}];// get one random quote
+</script></div></main></body><script>window.quotes = [{":c":"The function name should define everything the function does."},{":c":"In computing, invariants are ephemeral.",":a":"Alan J. Perlis"},{":c":"The greatest performance improvement of all is when a system goes from not-working to working.",":a":"John Ousterhout"},{":c":"Software is like sex: It's better when it's free.",":a":"Linus Torvalds"},{":c":"In man-machine symbiosis, it is man who must adjust: The machines can't.",":a":"Alan J. Perlis"},{":c":"Lisp isn't a language, it's a building material.",":a":"Alan Kay"},{":c":"Like a gas, software expands to fill its containing memory completely."},{":c":"Software is under a constant tension. Being symbolic it is arbitrarily perfectible; but also it is arbitrarily changeable.",":a":"Alan J. Perlis"},{":c":"It makes no sense to try to do what we can. We must do what is necessary.",":a":"Winston Churchill"},{":c":"The primary duty of an exception handler is to get the error out of the lap of the programmer and into the surprised face of the user. Provided you keep this cardinal rule in mind, you can't go far wrong.",":a":"Verity Stob"},{":c":"Complexity has nothing to do with intelligence, simplicity does.",":a":"Larry Bossidy"},{":c":"Ready, fire, aim: the fast approach to software development.\nReady, aim, aim, aim, aim: the slow approach to software development. \n"},{":c":"God could create the world in six days because he didn't have to make it compatible with the previous version."},{":c":"It's hard to read through a book on the principles of magic without glancing at the cover periodically to make sure it isn't a book on software design.",":a":"Bruce Tognazzini"},{":c":"We're even wrong about which mistakes we're making.",":a":"Carl Winfeld"},{":c":"I've never written the best code I've ever written."},{":c":"There are only two hard problems in Computer Science: cache invalidation and naming things.",":a":"Phil Karlton"},{":c":"There is nothing quite so permanent as a quick fix."},{":c":"Structured Programming supports the law of the excluded muddle.",":a":"Alan J. Perlis"},{":c":"Computers make it easier to do a lot of things, but most of the things they make it easier to do don't need to be done.",":a":"Andy Rooney"},{":c":"In effect, we conjure the spirits of the computer with our spells.",":a":"From SICP"},{":c":"I love deadlines. I like the whooshing sound they make as they fly by.",":a":"Douglas Adams"},{":c":"Don't code today what you can't debug tomorrow"},{":c":"How do we convince people that in programming simplicity and clarity —in short: what mathematicians call \"elegance\"— are not a dispensable luxury, but a crucial matter that decides between success and failure?\n",":a":"Edsger W. Dijkstra"},{":c":"We kid ourselves if we think that the ratio of procedure to data in an active data-base system can be made arbitrarily small or even kept small.",":a":"Alan J. Perlis"},{":c":"Bringing computers into the home won't change either one, but may revitalize the corner saloon.",":a":"Alan J. Perlis"},{":c":"Once you understand how to write a program get someone else to write it.",":a":"Alan J. Perlis"},{":c":"If I have not seen as far as others, it is because giants were standing on my shoulders.",":a":"Hal Abelson"},{":c":"Yes, sometimes Perl looks like line noise to the uninitiated, but to the seasoned Perl programmer, it looks like checksummed line noise with a mission in life.",":a":"Randal Schwartz"},{":c":"If we're supposed to work in Hex, why have we only got A fingers?"},{":c":"if you are a programmer working in 2003 and you don't know the basics of characters, character sets, encodings, and Unicode, and I catch you, I'm going to punish you by making you peel onions for 6 months in a submarine.",":a":"Joel Spolsky"},{":c":"In C, its easy to shoot yourself in the foot. C++ makes it more difficult, but when you do, you'll blow your whole leg off.",":a":"Stroustrup"},{":c":"As soon as you agree on the number of spaces for indentation, no-one argues for tabs.",":a":"Alvar Lumberg"},{":c":"Over the centuries the Indians developed sign language for communicating phenomena of interest. Programmers from different tribes (FORTRAN, LISP, ALGOL, SNOBOL, etc.) could use one that doesn't require them to carry a blackboard on their ponies.",":a":"Alan J. Perlis"},{":c":"It's 5.50 a.m.... Do you know where your stack pointer is?"},{":c":"When a professional race car driver races, his pulse gets lower and he relaxes. \nWhen I code it is the same thing.\n",":a":"Jun-ichiro Hagino"},{":c":"If you can't explain something to a six-year-old, you really don't understand it yourself.",":a":"Albert Einstein"},{":c":"In order to understand recursion, one must first understand recursion."},{":c":"It is the user who should parameterize procedures, not their creators.",":a":"Alan J. Perlis"},{":c":"There are only two industries that refer to their customers as users: the computer industry and the drug trade.",":a":"Edward Tufte"},{":c":"Everything should be built top-down, except the first time.",":a":"Alan J. Perlis"},{":c":"Owning a computer without programming is like having a kitchen and using only the microwave oven.",":a":"Charles Petzold"},{":c":"The reason we plan ahead is so that we don't have to do anything right now."},{":c":"PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil perpetrated by skilled but perverted professionals.",":a":"Jon Ribbens"},{":c":"It takes an intelligent person to build something complex; it takes a genius to build something simple."},{":c":"Whenever two programmers meet to criticize their programs, both are silent.",":a":"Alan J. Perlis"},{":c":"Simplicity is the ultimate sophistication.",":a":"Leonardo da Vinci"},{":c":"Intellectuals solve problems; geniuses prevent them.",":a":"Albert Einstein"},{":c":"We're even wrong about which mistakes we're making.",":a":"Carl Winfeld"},{":c":"Though a program be but three lines long, someday it will have to be maintained.",":a":"Tao Of Programming"},{":c":"You think you know when you can learn, are more sure when you can write, even more when you can teach, but certain when you can program.",":a":"Alan J. Perlis"},{":c":"Every program attempts to expand until it can read mail. Those programs which cannot so expand are replaced by ones which can.",":a":"Jamie Zawinski"},{":c":"Java is C++ without the guns, knives, and clubs.",":a":"James Gosling"},{":c":"The key to performance is elegance, not battalions of special cases.",":a":"Jon Bentley and Doug McIlroy"},{":c":"The whole point of getting things done is knowing what to leave undone.",":a":"Oswald Chambers"},{":c":"Multi-threading is the art of screwing things up before, during or after something else."},{":c":"Good programmers invest the effort to learn how to use current practices. Not-so-good programmers just learn the buzzwords, and that's been a software industry constant for a half century.",":a":"Boris Beizer"},{":c":"With regard to adding more programmers to get a project done faster - Nine people can't make a baby in a month.",":a":"Fred Brooks"},{":c":"You can't eliminate problems, but you can make trades to get problems that you prefer over the ones you have now.",":a":"Eric Sink's Axiom of Software Development"},{":c":"When a professor insists computer science is X but not Y, have compassion for his graduate students.",":a":"Alan J. Perlis"},{":c":"In C, its easy to shoot yourself in the foot. C++ makes it more difficult, but when you do, you'll blow your whole leg off.",":a":"Stroustrup"},{":c":"Any intelligent fool can make things bigger and more complex. It takes a touch of genius - and a lot of courage - to move in the opposite direction.",":a":"E.F. Schumacher"},{":c":"Computers are getting smarter all the time. Scientists tell us that soon they will be able to talk to us. (And by 'they', I mean 'computers'. I doubt scientists will ever be able to talk to us.)",":a":"Dave Barry"},{":c":"Three things should never be seen in the process of being created: laws, sausage, and software."},{":c":"Within a computer natural language is unnatural.",":a":"Alan J. Perlis"},{":c":"The proof of a system's value is its existence.",":a":"Alan J. Perlis"},{":c":"Sometimes I think the only universal in the computing field is the fetch-execute cycle.",":a":"Alan J. Perlis"},{":c":"An idiot with a computer is a faster, better idiot.",":a":"Rich Julius"},{":c":"Good programmers invest the effort to learn how to use current practices. Not-so-good programmers just learn the buzzwords, and that's been a software industry constant for a half century.",":a":"Boris Beizer"},{":c":"I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years.",":a":"Tony (C.A.R.) Hoare"},{":c":"I would love to change the world, but they won't give me the source code."},{":c":"Giving up on assembly language was the apple in our Garden of Eden: Languages whose use squanders machine cycles are sinful. The LISP machine now permits LISP programmers to abandon bra and fig-leaf.\n",":a":"Alan J. Perlis"},{":c":"We all agree on the necessity of compromise. We just can't agree on when it's necessary to compromise.",":a":"Larry Wall"},{":c":"Talk is cheap, show me the code!",":a":"Linus Torvalds"},{":c":"All problems in computer science can be solved with another level of indirection.",":a":"David Wheeler"},{":c":"Debugging is anticipated with distaste, performed with reluctance, and bragged about forever.",":a":"Dan Kaminsky"},{":c":"In English every word can be verbed. Would that it were so in our programming languages.",":a":"Alan J. Perlis"},{":c":"When all you have is a hammer, everything starts to look like a nail."},{":c":"Java is to JavaScript what Car is to Carpet.",":a":"Chris Heilmann"},{":c":"The primary duty of an exception handler is to get the error out of the lap of the programmer and into the surprised face of the user. Provided you keep this cardinal rule in mind, you can't go far wrong.",":a":"Verity Stob"},{":c":"I finally found a definition for \"middleware\". \"Middleware\" is the software nobody wants to pay for.\n",":a":"Chris Stone"},{":c":"Don't code today what you can't debug tomorrow"},{":c":"As Will Rogers would have said, \"There is no such thing as a free variable.\"\n",":a":"Alan J. Perlis"},{":c":"Rules for optimization:\n1. Don't do it.\n2. (for experts only) Don't do it yet.\n",":a":"Michael A Jackson"},{":c":"Every program is a part of some other program and rarely fits.",":a":"Alan J. Perlis"},{":c":"Going from programming in Pascal to programming in C, is like learning to write in Morse code.",":a":"J.P. Candusso"},{":c":"The greatest performance improvement of all is when a system goes from not-working to working.",":a":"John Ousterhout"},{":c":"Enlightened trial and error outperforms the planning of flawless intellects.",":a":"David Kelly"},{":c":"A programmer that is 10 times better than another will probably be happy making only 3 times as much.",":a":"Paul Graham"},{":c":"The C Programming Language — A language which combines the flexibility of assembly language with the power of assembly language."},{":c":"God could create the world in six days because he didn't have to make it compatible with the previous version."},{":c":"If it doesn't work, it doesn't matter how fast it doesn't work.",":a":"Ravera's observation on premature optimization"},{":c":"I love deadlines. I like the whooshing sound they make as they fly by.",":a":"Douglas Adams"},{":c":"Consider the postage stamp: its usefulness consists in the ability to stick to one thing until it gets there.",":a":"Josh Billings"},{":c":"It always takes longer than you expect, even when you take into account Hofstadter's Law.",":a":"Hofstadter's Law"},{":c":"An adequate bootstrap is a contradiction in terms.",":a":"Alan J. Perlis"},{":c":"Owning a computer without programming is like having a kitchen and using only the microwave oven.",":a":"Charles Petzold"},{":c":"Re graphics: A picture is worth 10K words - but only those to describe the picture. Hardly any sets of 10K words can be adequately described with pictures.",":a":"Alan J. Perlis"},{":c":"Artificial Intelligence is no match for natural stupidity."},{":c":"Design bugs are often subtle and occur by evolution with early assumptions being forgotten as new features or uses are added to a system.",":a":"Fernando J. Corbató"}];// get one random quote
 function randomQuote(){
   var obj = quotes[Math.floor(Math.random()*quotes.length)];
   document.querySelector('.quote-value').textContent = obj[':c'];

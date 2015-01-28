@@ -1,8 +1,12 @@
 extends layout.jade
 
+
 block menu
   h1
     span Poe Guide
+
+  script
+    !=locals.toggleTheme
 
   hr.menu-top
 
@@ -36,10 +40,7 @@ block menu
       +listitem('Initializing', 'complete')
       +listitem('Login', 'complete')
       +listitem('Mongoose', 'complete')
-      +listitem('Wiring Up', 'incomplete')
-      // +listitem('Front-Ends', 'incomplete')
-      // +listitem('Contracts', 'incomplete')
-      // +listitem('Systems', 'incomplete')
+      +listitem('Wiring It Up', 'complete')
 
     +list('incomplete')
       +listitem('Client Hypermedia', 'incomplete')
@@ -61,13 +62,6 @@ block menu
       +listitem('Credits', 'incomplete')
       +listitem('License', 'incomplete')
 
-    //- +list(5, 'incomplete')
-    //-   +listitem('Full-Stack', 'incomplete')
-    //-   +listitem('Requirements', 'incomplete')
-    //-   +listitem('Front-Ends', 'incomplete')
-    //-   +listitem('Contracts', 'incomplete')
-    //-   +listitem('Systems', 'incomplete')
-
   hr.menu-bottom
 
   .quotes
@@ -75,12 +69,16 @@ block menu
       blockquote.quote-value
       strong.quote-author
 
+  a.btn-toggle(href='#dark' onclick='toggleTheme();') clr
+
+
 block content
 
   mixin section(name)
     - var id = name.split(' ').join('-').toLowerCase()
     - var section = id + '-section'
     h2(id=id)= name
+    h2.section-filler=name
     section(id=section class=section)
       block
 
@@ -105,10 +103,14 @@ block content
     +subsection('Initializing'): include:md sections/api-initializing.md
     +subsection('Login'): include:md sections/api-login.md
     +subsection('Mongoose'): include:md sections/api-mongoose.md
+    +subsection('Wiring It Up')
+      include:md sections/wiring-it-up.md
+      style: include styles/pygments.css
 
   +section('Appendix')
     +subsection('Organizations'): include:md sections/organizations.md
     +subsection('Resources'): include:md sections/resources.md
 
   script
+    include scripts/attach.js
     include scripts/click.js

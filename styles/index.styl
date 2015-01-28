@@ -35,8 +35,12 @@ aglet--require-font-icon = false
 html
   font-size 14px
 
+
 body
   overflow-x hidden
+  &.dark-theme
+    background-color hsla(192, 93%, 11%, 1)
+    color rgba(white, .95)
 
 h1
 h2
@@ -54,16 +58,28 @@ h1
   text-align center
 
 h2
+  background linear-gradient(to top, rgba(white, 0) 0%, rgba(white, 1) 30%, white 75%, rgba(white, 0) 100%)
   color blue
   font-size 25px
   font-weight bold
-  padding 50px 0
-  position relative
-  right 850px
+  padding 100px 0 50px
+  position absolute
+  margin-left -250px
+  margin-bottom 0
+  margin-top -50px
   text-align right
+  width 400px
+
+  &.section-filler
+    position relative
+    opacity 0
+    z-index -1
 
 h4
   font-size 12px
+
+.main-inner
+  position relative
 
 pre
 code
@@ -101,6 +117,19 @@ hr
 
 .quote-author
   margin-right 2rem
+
+a.btn-toggle
+  right 0
+  top 0
+  color blue
+  opacity .1
+  padding 1rem
+  position fixed
+  &:hover
+    opacity 1
+  &:focus
+  &:active
+    outline 0
 
 blockquote
   margin-right 5rem
@@ -190,6 +219,14 @@ section
     font-size 12px
     @extends $side-header
 
+  h3
+    background white
+    margin-left -450px
+    right initial
+    text-align right
+    width 400px
+
+
 create-label(sel, label, color)
   .{sel}
     color lighten(desaturate(color, 50%), 25%)
@@ -201,6 +238,11 @@ create-label(sel, label, color)
       content label
       color color
       @extends $side-header
+
+    &.no-header:before
+      content ''
+      display none
+
     pre > code
       background-color rgba(color, .05)
       padding-top 1rem
@@ -208,6 +250,7 @@ create-label(sel, label, color)
     p code
       border-color rgba(color, .25)
 
+create-label('INFO', 'Info', green)
 create-label('NOTE', 'Note', yellow)
 create-label('WARNING', 'Warning', orange)
 
@@ -228,7 +271,7 @@ pre code
 
 .filetree-content pre code
   background transparent
-  
+
 
 code.short
   @extends code.block

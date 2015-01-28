@@ -16,6 +16,7 @@ var quotes = require('./pretty.json');
 
 // local files as strings
 var locals = {
+  'toggleTheme': require('./scripts/local-storage.mm')(),
   '.env': require('./raw/.env')(),
   '.foreman': require('./raw/.foreman')(),
   'Makefile': require('./raw/Makefile')(),
