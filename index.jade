@@ -77,8 +77,12 @@ block content
   mixin section(name)
     - var id = name.split(' ').join('-').toLowerCase()
     - var section = id + '-section'
-    h2(id=id)= name
-    h2.section-filler=name
+    h2(id=id)
+      a.section-link(href='#' + id)
+        span.section-text
+          span.section-icon!='&#5772;&nbsp;'
+          = name
+    h2.section-filler(style="z-index: -1!important;")=name
     section(id=section class=section)
       block
 
@@ -111,6 +115,7 @@ block content
     +subsection('Organizations'): include:md sections/organizations.md
     +subsection('Resources'): include:md sections/resources.md
 
+  i.icon-chrome
   script
     include scripts/attach.js
     include scripts/click.js
