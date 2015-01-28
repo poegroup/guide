@@ -1,6 +1,6 @@
 
 var currentTheme = window.localStorage.getItem('theme');
-if (!currentTheme) setTheme('dark-theme');
+if (!currentTheme) setTheme('light-theme');
 else setTheme(currentTheme);
 
 function toggleTheme() {
