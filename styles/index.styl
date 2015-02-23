@@ -207,13 +207,12 @@ $side-header
 
   &-icon
     color lighten(desaturate(blue, 50%), 30%)
-    margin-left -15px
-    position absolute
+    height 0
+    position relative
     opacity 0
-    transition all 200ms ease
+    transition opacity 200ms ease
     a:hover &
       opacity 1
-      margin-left -30px
 
 section
   box-sizing border-box

@@ -8,7 +8,7 @@ function toggleTheme() {
 }
 
 function setTheme(theme) {
-  window.localStorage.setItem('theme', theme);
+  window.localStorage.setItem('theme', 'light-theme');
   document.body.className = theme;
 }
 

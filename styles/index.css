@@ -673,19 +673,19 @@ section h3,
 }
 .section-icon {
   color: #7f919d;
-  margin-left: -15px;
-  position: absolute;
+  height: 0;
+  position: relative;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   -webkit-filter: alpha(opacity=0);
   -moz-filter: alpha(opacity=0);
   -ms-filter: alpha(opacity=0);
   filter: alpha(opacity=0);
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  transition: all 200ms ease;
+  -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  -ms-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
 }
 a:hover .section-icon {
   opacity: 1;
@@ -694,7 +694,6 @@ a:hover .section-icon {
   -moz-filter: none;
   -ms-filter: none;
   filter: none;
-  margin-left: -30px;
 }
 section {
   -webkit-box-sizing: border-box;
